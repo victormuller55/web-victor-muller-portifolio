@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'MontSerrat';
+    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+  
+body {
+    font-family: 'MontSerrat', sans-serif;
+}
+
+.title {
+    font-weight: bold; 
+    color: #006394;
+}
+
+.text {
+    line-height: 2; 
+    font-size: 17px;
+    color: grey;
+}
+
+.div-grey {
+    background-color: #EFEFEF;
+}
+
+.button-whats-app {
+    width: 220px;
+    height: 50px;
+    background-color: #25d366;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button-whats-app:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+}
+
+/* -------------- HEADER -------------- */
+
+.header {
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 1px solid #FFFFFF; 
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: #006394;
+}
+
+#texto-digitado {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 50px;
+    font-weight: bold;
+    border-right: 2px solid #000;
+    animation: digitar 1s steps(40);
+}
+
+.image-header {
+    height: 100vh;
+    background-image: url("/assets/image/imagem-header.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.button-header {
+    width: 200px;
+    height: 40px;
+    background-color: #006394;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button-header.border {
+    background-color: transparent;
+    border: #006394 5px;
+}
+
+.button-header:hover {
+    background-color: #006394;
+    transform: translateY(-3px);
+}
+
+.button-header-nav {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 20px;
+}
+
+/* -------------- ABOUT ME -------------- */
+
+#div-about-me {
+    margin-top: 300px;
+    opacity: 0;
+}
+
+#linguages {
+    opacity: 0;
+}
+
+.linguages {
+    height: 120px;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    padding-top: 25px;
+    background-color: #EFEFEF;
+    border: #006394 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.linguages:hover {
+    color: #006394;
+    font-weight: bold;
+    border: 2px solid #006394; 
+    box-shadow: 0 5px 10px #CCCCCC;
+    transform: translateY(-10px);
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url("/assets/svg/wave-top.svg");
+    background-position: center top;
+}
+
+.layer2 {
+    background-image: url("/assets/svg/wave-bottom.svg");
+    background-position: center top;
+}
+
+/* -------------- PROJECTS -------------- */
+
+.card-project {
+    position: relative;
+    margin: 5px;
+    border-radius: 5px;
+    height: 200px;
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+
+.card-project:hover {
+    background-color: grey;
+    transform: perspective(500px) translateZ(70px);
+    z-index: 2;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-project:hover .card-content {
+    opacity: 1;
+}
+
+.card-project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+
+.card-project:hover img {
+    filter: none;
+}
+
+.card-project h3 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.card-project:hover h3 {
+    opacity: 0;
+}
+
+.card-project p {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    color: white;
+    font-size: 13px;
+    transition: opacity 0.3s ease;
+}
+
+.card-project:hover p {
+    opacity: 0;
+}
+
+/* -------------- EXPERIENCES -------------- */
+
+#experiences {
+    opacity: 0;
+}
+
+#experiences.active {
+    opacity: 0;
+    animation: aparecerDaDireitaParaEsquerda 1s ease-in-out forwards;
+}
+
+/* -------------- CONTACT -------------- */
+
+#contact {
+    opacity: 0;
+}
+
+#contact.active {
+    opacity: 0;
+    animation: aparecerDaDireitaParaEsquerda 1s ease-in-out forwards;
+}
+
+/* -------------- ANIMATIONS -------------- */
+
+.animate-show-3-sec {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out 0s forwards;
+}
+
+.animate-show-2-sec {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0s forwards;
+}
+
+.animate-show-up-500-ms {
+    animation: aparecerDeBaixoParaCima 500ms ease-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes aparecerDeBaixoParaCima {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerDaDireitaParaEsquerda {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes digitar {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
