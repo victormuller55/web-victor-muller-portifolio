@@ -2,6 +2,10 @@
     font-family: 'MontSerrat';
     src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+
+html {
+    scroll-behavior: smooth;
+}
   
 body {
     font-family: 'MontSerrat', sans-serif;
@@ -18,48 +22,78 @@ body {
     color: grey;
 }
 
+
 .div-grey {
     background-color: #EFEFEF;
 }
 
-.button-whats-app {
-    width: 220px;
-    height: 50px;
-    background-color: #25d366;
-    font-weight: bold;
-    border: 0px;
-    border-radius: 20px;
+/* --------- BOTÃO --------- */
+
+.button-rouded {
+    background-color: #002D9C;
+    border: none;
+    width: 200px;
+    border-radius: 17px;
     transition: transform 0.3s ease-in-out;
 }
 
-.button-whats-app:hover {
-    background-color: #128c7e;
-    transform: translateY(-3px);
+.button-rouded.header {
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* -------------- HEADER -------------- */
+.button-rouded:hover {
+    background-color: #002D9C;
+    border: 2px solid white;
+    transform: translateY(-10px);
+}
+
+.button-rouded.header:hover {
+    border-radius: 20px;
+    width: 100px;
+    font-size: 14px;
+    transform: none;
+}
+
+/* --------- BOTÃO WHATS APP --------- */
+
+.button-whats-app {
+    width: 60px;
+    height: 60px;
+    border-radius: 360px;
+    background-color: #25d366;
+    border: none;
+}
+
+@media (max-width: 980px) {
+    .button-whats-app {
+        display: none;
+    }
+}
+
+.button-whats-app:hover {
+    border: 2px solid white;
+    background-color: #25d366;
+}
+
+/* --------- HEADER --------- */
 
 .header {
     color: white;
-    text-transform: uppercase;
-    border-bottom: 1px solid #FFFFFF; 
+    border-bottom: 0.2px solid #CCCCCC;
     backdrop-filter: blur(20px);
     background-color: transparent;
     transition: background-color 0.5s ease-in-out;
 }
 
 .header.scrolled {
-    background-color: #006394;
+    background-color: #002D9C;
 }
 
-#texto-digitado {
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 50px;
-    font-weight: bold;
-    border-right: 2px solid #000;
-    animation: digitar 1s steps(40);
-}
+/* --------- HOME --------- */
 
 .image-header {
     height: 100vh;
@@ -70,56 +104,53 @@ body {
     background-attachment: fixed;
 }
 
-.button-header {
-    width: 200px;
-    height: 40px;
-    background-color: #006394;
+#texto-digitado {
+    white-space: nowrap;
+    overflow: hidden;
     font-weight: bold;
-    font-size: 13px;
-    border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
+    border-right: 2px solid #000;
+    animation: digitar 1s steps(40);
 }
 
-.button-header.border {
-    background-color: transparent;
-    border: #006394 5px;
-}
+/* --------- ABOUT --------- */
 
-.button-header:hover {
-    background-color: #006394;
-    transform: translateY(-3px);
+.wave {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/assets/svg/wave-top.svg");
+    background-position: center top;
 }
-
-.button-header-nav {
-    width: 150px;
-    height: 40px;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 13px;
-    border-radius: 20px;
-}
-
-/* -------------- ABOUT ME -------------- */
 
 #div-about-me {
-    margin-top: 300px;
     opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+#div-about-me.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-#linguages {
-    opacity: 0;
+#minha-foto {
+    display: block;
+}
+
+.about {
+    padding-top: 200px;
 }
 
 .linguages {
     height: 120px;
     width: 100px;
     border-radius: 20px;
-    text-align: center;
-    color: black;
-    padding-top: 25px;
     background-color: #EFEFEF;
-    border: #006394 5px;
-    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-30%);
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 .linguages:hover {
@@ -127,28 +158,21 @@ body {
     font-weight: bold;
     border: 2px solid #006394; 
     box-shadow: 0 5px 10px #CCCCCC;
-    transform: translateY(-10px);
+    transform: translateY(-50px);
 }
 
-.spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.linguages.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.layer1 {
-    background-image: url("/assets/svg/wave-top.svg");
-    background-position: center top;
+@media (max-width: 980px) {
+    #minha-foto {
+        display: none;
+    }
 }
 
-.layer2 {
-    background-image: url("/assets/svg/wave-bottom.svg");
-    background-position: center top;
-}
-
-/* -------------- PROJECTS -------------- */
+/* --------- PROJECTS --------- */
 
 .card-project {
     position: relative;
@@ -157,9 +181,16 @@ body {
     height: 200px;
     width: 350px;
     overflow: hidden;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 0.8s, transform 0.8s;
     transform-style: preserve-3d;
     z-index: 1;
+}
+
+.card-project.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .card-project:hover {
@@ -175,7 +206,6 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -197,57 +227,81 @@ body {
     filter: none;
 }
 
-.card-project h3 {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.card-project:hover h3 {
-    opacity: 0;
-}
-
+.card-project h3, 
 .card-project p {
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
-    color: white;
-    font-size: 13px;
     transition: opacity 0.3s ease;
 }
-
+.card-project:hover h3,
 .card-project:hover p {
     opacity: 0;
 }
 
-/* -------------- EXPERIENCES -------------- */
+.card-project p {
+    opacity: 1;
+    top: 65%;
+    color: white;
+    font-size: 13px;
+}
+
+/* --------- EXPERIENCES --------- */
 
 #experiences {
     opacity: 0;
+    transition: opacity 0.8s, transform 0.8s;
+    transform: translateX(-30%);
 }
 
 #experiences.active {
-    opacity: 0;
-    animation: aparecerDaDireitaParaEsquerda 1s ease-in-out forwards;
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* -------------- CONTACT -------------- */
+/* --------- CONTACT --------- */
+
+.title-contact {
+    color: grey;
+    font-weight: bold;
+}
 
 #contact {
+    padding-top: 100px;
+    padding-bottom: 200px;
     opacity: 0;
+    transition: opacity 0.8s, transform 0.8s;
+    transform: translateX(-30%);
 }
 
 #contact.active {
-    opacity: 0;
-    animation: aparecerDaDireitaParaEsquerda 1s ease-in-out forwards;
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* -------------- ANIMATIONS -------------- */
+.contact-group {
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.contact-group:hover {
+    font-weight: bold;
+    color: #002D9C;
+    transform: perspective(500px) translateZ(70px);
+}
+
+.circle-contact {
+    height: 70px;
+    width: 70px;
+    background-color: #002D9C;
+    padding-top: 18px;
+    border-radius: 360px;
+}
+
+
+/* --------- ANIMATIONS --------- */
 
 .animate-show-3-sec {
     opacity: 0;

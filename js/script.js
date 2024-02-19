@@ -1,17 +1,4 @@
-// -------------- FUNCTIONS --------------
-
-function getWindowSize() {
-  var larguraTela =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  var alturaTela =
-    window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
-
-  return { largura: larguraTela, altura: alturaTela };
-}
+// ------------ HEADER ------------
 
 function isElementInViewport(elem) {
   var $elem = $(elem);
@@ -23,41 +10,44 @@ function isElementInViewport(elem) {
   return elemBottom <= docViewBottom && elemTop >= docViewTop;
 }
 
-// -------------- FUNCTIONS HTML --------------
+  $(window).scroll(function () {
+    if (isElementInViewport($('#div-about-me'))) {
+      $('#div-about-me').addClass('active');
+    }
 
-function handleResize() {
-  var windowSize = getWindowSize();
+    if (isElementInViewport($(".linguages"))) {
+      $('.linguages').addClass('active');
+    }
 
-  const divAboutMe = document.querySelector("#div-about-me");
-  const textAboutMe = document.querySelector("#text-about-me");
+    if (isElementInViewport($(".card-project"))) {
+      $('.card-project').addClass('active');
+    }
 
-  if (windowSize.largura < 980) {
-    divAboutMe.classList.remove("w-50");
-    textAboutMe.classList.add("mr-4");
-    textAboutMe.classList.add("ml-4");
-  } else {
-    divAboutMe.classList.add("w-50");
-    textAboutMe.classList.remove("mr-4");
-    textAboutMe.classList.remove("ml-4");
+    if (isElementInViewport($("#experiences"))) {
+      $('#experiences').addClass('active');
+    }
+
+    if (isElementInViewport($("#contact"))) {
+      $('#contact').addClass('active');
+    }
+  });
+
+// Escreve Victor Muller na Home
+
+const texto = "Victor Muller";
+let index = 0;
+const intervalo = 150;
+
+function adicionarCaractere() {
+  document.getElementById("texto-digitado").textContent += texto[index];
+  index++;
+
+  if (index < texto.length) {
+    setTimeout(adicionarCaractere, intervalo);
   }
 }
 
-function checkAndAnimate() {
-  const elements = ["#about", "#linguages", "#experiences", "#contact", ".card-project"];
-
-  elements.forEach(element => {
-    const els = document.querySelectorAll(element);
-    els.forEach(el => {
-      if (isElementInViewport(el)) {
-        el.classList.add(element.includes("card-project") ? "active" : "animate-show-2-sec");
-      }
-    });
-  });
-}
-
-$(window).on("scroll", function () {
-  checkAndAnimate();
-});
+// Coloca cor no Header ao Scroll 
 
 $(document).ready(function () {
   var header = $(".header");
@@ -73,37 +63,43 @@ $(document).ready(function () {
   });
 });
 
-const texto = "Victor Muller";
-let index = 0;
-const intervalo = 150;
+window.onload = adicionarCaractere;
 
-function adicionarCaractere() {
-  document.getElementById("texto-digitado").textContent += texto[index];
-  index++;
+// ------------ ABOUT ------------
 
-  if (index < texto.length) {
-    setTimeout(adicionarCaractere, intervalo);
+// Ajusta Texto About Me ao tamanho da tela
+
+function adjustTextAlignment() {
+
+  var aboutMeText = document.getElementById('text-about-me');
+  var aboutMeDiv= document.getElementById('div-about-me');
+
+  if (window.innerWidth < 980) {
+    
+    aboutMeText.classList.add('text-center');
+    aboutMeText.classList.add('ml-3');
+    aboutMeText.classList.add('mr-3');
+
+    aboutMeText.classList.remove('text-left');
+    aboutMeText.classList.remove('ml-5');
+
+    aboutMeDiv.classList.remove("w-50");
+
+  } else {
+
+    aboutMeText.classList.remove('text-center');
+    aboutMeText.classList.remove('ml-3');
+    aboutMeText.classList.remove('mr-3');
+
+    aboutMeText.classList.add('text-left');
+    aboutMeText.classList.add('ml-5');
+
+    aboutMeDiv.classList.add("w-50");
+
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollLinks = document.querySelectorAll(".scroll-link");
 
-  scrollLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
 
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-});
-window.onload = adicionarCaractere;
-
-window.addEventListener("resize", handleResize);
-handleResize();
-checkAndAnimate();
+adjustTextAlignment();
+window.addEventListener('resize', adjustTextAlignment);

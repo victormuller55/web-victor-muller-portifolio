@@ -1,266 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Muller | Mobile Developer</title>
-    <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" href="assets/image/icons/dev.png" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
-  </head>
-  <body>
-    <button type="button" class="btn btn-primary button-whats-app mt-3 fixed-bottom fixed-left ml-3 mb-3" onclick="window.location.href='https://api.whatsapp.com/send?phone=5541995919194'">
-        <img class="pr-3" src="assets/image/logo-whats-app.png" alt="">
-        (41) 9 99591-9194
-    </button>      
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top header">
-        <div class="container">
-          <a class="navbar-brand text-white" href="#"><h5 class="pt-1">Victor Muller</h5></a>
-          <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#projects">Projects</a></li>
-              <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#experiences1">Experiences</a></li>
-              <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#contact">Contact</a></li>
-              <li class="nav-item"><button type="button" onclick="window.open('https://github.com/victormuller55', '_blank')" class="btn btn-primary button-header-nav border animate-show-3-sec ml-3 d-none d-lg-block">GitHub</button></li>
-              <li class="nav-item"><button type="button" onclick="window.open('https://www.linkedin.com/in/victor-muller-846607229/', '_blank')" class="btn btn-primary button-header-nav border animate-show-3-sec ml-3 d-none d-lg-block">LinkedIn</button></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="image-header d-flex flex-column align-items-center justify-content-center text-center">
-        <h5 id="texto-digitado" class="text-white ml-5 mr-5"></h5>
-        <p class="text-white ml-5 mr-5 animate-show-3-sec">MOBILE DEVELOPER | SOFTWARE ENGINEER</p>
-        <div>
-          <button type="button" onclick="window.location.href='#contact'" class="btn btn-primary button-header border mt-3 animate-show-3-sec mr-1">TALK TO ME</button>
-          <button type="button" onclick="window.open('https://curriculo-victor-muller.s3.amazonaws.com/resume_victor_muller_da_luz.pdf', '_blank')" class="btn btn-primary button-header mt-3 animate-show-3-sec ml-1">
-            VIEW CV
-          </button>
-        </div>
-        <p class="text-white ml-5 mr-5 mt-5">Scroll to know more ⬇️</p>
-      </div>
-      <div class="spacer layer1 pt-5">
-        <div class="container-fluid d-flex align-items-center mt-5">
-          <section id="about" style="height: 250px;"></section>
-          <div id="div-about-me" class="w-50 mx-auto">
-              <h2 class="text-center mt-4 mb-5 mt-5 ml-4 title">About me</h2>
-              <div class="d-flex justify-content-center mb-4 align-items-start">
-                <img id="minha-foto" class="rounded-circle" src="assets/image/me.png" alt="">
-                <h5 id="text-about-me" class="text-left mb-4 ml-5 text">My name is Victor, and I am in the fifth semester of Software Engineering. My most familiar and interesting languages are Flutter and Java. I believe in the importance of constantly seeking knowledge in my professional journey, always looking for challenges that expand my horizons.</h5>
-              </div>
-          </div>
-        </div>
-        <div id="linguages">
-          <h4 class="text-center mt-4 mb-4">Languages and Frameworks</h4>
-          <div class="container-fluid">
-            <div class="justify-content-center row">
-              <a style="text-decoration: none;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML"><div id="l1" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/html.png" alt=""><br>HTML</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><div id="l2" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/css.png" alt=""><br>CSS</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><div id="l3" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/js.png" alt=""><br>JS</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://docs.flutter.dev/"><div id="l4" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/flutter.png" alt=""><br>FLUTTER</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://docs.oracle.com/en/java/"><div id="l5" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/java.png" alt=""><br>JAVA</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://dart.dev/guides"><div id="l6" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/dart.png" alt=""><br>DART</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://www.php.net/"><div id="l7" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/php.png" alt=""><br>PHP</div></a>
-              <a style="text-decoration: none;" target="_blank" href="https://spring.io/projects/spring-boot"><div id="l8" class="linguages mr-2 mt-2"><img class="mb-2" src="assets/image/icons/spring-boot.png" alt=""><br>SPRING</div></a>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Muller | Mobile Developer</title>
+  <link rel="stylesheet" href="style/bootstrap.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="assets/image/icons/dev.png" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button type="button" class="btn btn-primary button-whats-app fixed-bottom fixed-left mb-3 ml-3" data-toggle="tooltip" data-placement="right" title="Entre em contato via WhatsApp" onclick="window.location.href='https://api.whatsapp.com/send?phone=5541995919194'">
+    <img src="assets/image/logo-whats-app.png" alt="">
+  </button>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top header">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#"><h5 class="pt-1">Victor Muller</h5></a>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img width="30" src="assets/image/icons/menu.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#experiences">Experiences</a></li>
+            <li class="nav-item"><a class="nav-link text-white font-header-options scroll-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><button type="button" onclick="window.open('https://github.com/victormuller55', '_blank')" class="btn btn-primary button-rouded header github border animate-show-3-sec ml-3 d-none d-lg-block">GitHub</button></li>
+            <li class="nav-item"><button type="button" onclick="window.open('https://www.linkedin.com/in/victor-muller-846607229/', '_blank')" class="btn btn-primary button-rouded header linkedin border animate-show-3-sec ml-3 d-none d-lg-block">LinkedIn</button></li>
+          </ul>
         </div>
       </div>
-      <section id="projects" style="height: 50px;"></section>
-      <div class=" pt-2 pb-5 div-grey">
-        <h1 class="container mb-5 mt-5  title">Some Projects</h1>
-        <div class="container">
-          <div class=" row justify-content-center">
-            <a href="#" data-toggle="modal" data-target="#portfolio">
-              <div id="card-project-1" class="card-project">
-                <img src="assets/image/projects/portifolio/portifolio2.png" alt="">
-                <h3 class="text-white"><b>Portifolio</b></h3>
-                <p>Show More</p>
-              </div>
-            </a> 
-            <a href="#" data-toggle="modal" data-target="#mini-game">
-              <div id="card-project-1" class="card-project">
-                <img src="assets/image/projects/mini-game/mario.png" alt="">
-                <h3 class="text-white"><b>Mini-Game</b></h3>
-                <p>Show More</p>
-              </div>
-            </a>
-            <a href="#" data-toggle="modal" data-target="#exampleModal">
-              <div id="card-project-1" class="card-project">
-                <img src="assets/image/imagem-header.png" alt="">
-                <h3 class="text-white"><b>Cashboost</b></h3>
-                <p>Show More</p>
-              </div>
-            </a>
-            <a href="#" data-toggle="modal" data-target="#exampleModal">
-              <div id="card-project-1" class="card-project">
-                <img src="assets/image/imagem-header.png" alt="">
-                <h3 class="text-white"><b>App Troy</b></h3>
-                <p>Show More</p>
-              </div>
-            </a>   
-            <a href="#" data-toggle="modal" data-target="#exampleModal">
-              <div id="card-project-1" class="card-project">
-                <img src="assets/image/projects/tech/tech.png" alt="">
-                <h3 class="text-white"><b>API System</b></h3>
-                <p>Show More</p>
-              </div>
-            </a>        
-          </div>
-        </div>
+    </nav>
+  </header>
+  <main>
+    <div class="image-header d-flex flex-column align-items-center justify-content-center text-center">
+      <h1 id="texto-digitado" class="text-white ml-5 mr-5"></h1>
+      <p class="text-white ml-5 mr-5 animate-show-3-sec">MOBILE DEVELOPER | SOFTWARE ENGINEER</p>
+      <div>
+        <button type="button" onclick="window.location.href='#contact'" class="btn btn-primary button-rouded mt-3 animate-show-3-sec mr-1">TALK TO ME</button>
+        <button type="button" onclick="window.open('https://curriculo-victor-muller.s3.amazonaws.com/resume_victor_muller_da_luz.pdf', '_blank')" class="btn btn-primary button-rouded mt-3 animate-show-3-sec ml-1">VIEW CV</button>
       </div>
-        <section id="experiences1" style="height: 50px;"></section>
-        <div id="experiences" class="container pt-5 pb-5">
-          <h1 class="title">Experiences</h1>
-          <div id="accordion">
-            <div class="card mt-5">
-              <div class="card-header justify-content-between" id="headingOne">
-                <h5 class="mb-0">
-                  <button style="text-decoration: none;" class="btn btn-link text" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    TX Fuel (03/03/2022 - 06/06/2023)
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  During my internship at TX Fuel, I was able to enhance my skills in mobile app development, web systems, and the creation and updating of project documentation. I worked collaboratively, learning to work in a team and consistently striving to deliver exceptional results. This opportunity significantly contributed to my professional growth, enabling me to apply my knowledge in a practical manner and add value to the projects I was involved in.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="div-grey">
-        <section id="contact" class="container pt-5 pb-5">
-          <h1 class="title">Contact</h1>
+      <p class="text-white ml-5 mr-5 mt-5">Scroll to know more</p>
+      <img width="30" src="assets/image/icons/arrow_down.png" alt="">
+    </div>
+    <section>
+      <div class="wave about">
+        <div style="height: 150px;" id="about"></div>
+        <h2  class="text-center title">About me</h2>
+        <div id="div-about-me" class="container mx-auto mt-5">
           <div class="d-flex">
-              <img class="mr-2" src="assets/image/contact-icons/email.png" alt="">
-              victormuller050@gmail.com
+            <img id="minha-foto" class="rounded-circle" width="90" height="90" src="assets/image/me.png" alt="">
+            <h5 id="text-about-me" class="text-left mb-4 ml-5 text">My name is Victor, and I am in the fifth semester of Software Engineering. My most familiar and interesting languages are Flutter and Java. I believe in the importance of constantly seeking knowledge in my professional journey, always looking for challenges that expand my horizons.</h5>
           </div>
-          <hr>
-          <div class="d-flex">
-            <img class="mr-2" src="assets/image/contact-icons/house.png" alt="">
-            R. Begônia, 610 - Campina da Barra, Araucária - PR, 83709-320 
-          </div>
-          <hr>
-          <div class="d-flex">
-            <img  class="mr-2" src="assets/image/contact-icons/phone.png" alt="">
-            +55 (41) 99591-9194 ( WhatsApp )
-          </div>
-        </section>
+        </div>
       </div>
-    </main>
-    <footer></footer>
-  </body>
-  <div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 90%; max-height: 80vh;" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title title" id="exampleModalLabel">Portifolio | Victor Muller da Luz</h5>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex">
-                <div class="mr-3">
-                  <p><b>About This Project</b></p>
-                  <p>This portfolio showcases the work of Victor Muller da Luz, a dedicated Software Engineering student. Initiated on February 15, 2024, this portfolio was meticulously crafted over a span of three days, reflecting Victor's passion for software development and his commitment to showcasing his skills and projects.</p>
-                  <hr>
-                  <p><b>Languages and Frameworks</b></p>
-                  <div>
-                    <span class="badge badge-light m-1"><img width="13" src="assets/image/icons/html.png" alt=""> HTML</span>
-                    <span class="badge badge-light m-1"><img width="13" src="assets/image/icons/css.png" alt=""> CSS</span>
-                    <span class="badge badge-light m-1"><img width="13" src="assets/image/icons/js.png" alt=""> Java Script</span>
-                  </div>
-                </div>
-                <div>
-                  <p><b>Imagens</b></p>
-                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/image/projects/portifolio/portifolio1.png" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/image/projects/portifolio/portifolio2.png" alt="Second slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/image/projects/portifolio/portifolio3.png" alt="Third slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary button-header" data-dismiss="modal">Close</button>
+      <div id="linguages">
+        <h4 class="text-center mt-4 mb-4">Languages and Frameworks</h4>
+        <div class="container-fluid">
+          <div class="justify-content-center row">
+            <a style="text-decoration: none;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML"><div id="l1" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/html.png" alt=""><br>HTML</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><div id="l2" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/css.png" alt=""><br>CSS</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><div id="l3" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/js.png" alt=""><br>JS</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://docs.flutter.dev/"><div id="l4" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/flutter.png" alt=""><br>FLUTTER</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://docs.oracle.com/en/java/"><div id="l5" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/java.png" alt=""><br>JAVA</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://dart.dev/guides"><div id="l6" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/dart.png" alt=""><br>DART</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://www.php.net/"><div id="l7" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/php.png" alt=""><br>PHP</div></a>
+            <a style="text-decoration: none;" target="_blank" href="https://spring.io/projects/spring-boot"><div id="l8" class="linguages mr-2 mt-2 text-dark text-center pt-4"><img class="mb-2" src="assets/image/icons/spring-boot.png" alt=""><br>SPRING</div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="projects" style="height: 65px;"></div>
+      <div class="pt-3 pb-3 div-grey">
+        <h1 class="container mb-5 mt-5 title">Some Projects</h1>
+        <div class="container mb-3">
+            <div class="row justify-content-center">
+
+                <!-- Portifolio -->
+                <a target="_blank" href="https://github.com/victormuller55/victor-muller-portifolio" class="card-project">
+                    <img src="assets/image/projects/portifolio/portifolio2.png" alt="">
+                    <h3 class="text-white"><b>Portifolio</b></h3>
+                    <p>Go to GitHub</p>
+                </a>
+    
+                <!-- Mini-Game -->
+                <a target="_blank" href="https://github.com/victormuller55/mario_mini_game" class="card-project">
+                    <img src="assets/image/projects/mini-game/mario.png" alt="">
+                    <h3 class="text-white"><b>Mini-Game</b></h3>
+                    <p>Go to GitHub</p>
+                </a>
+    
+                <!-- Cashboost -->
+                <a target="_blank" href="https://github.com/victormuller55/app_cashboost" class="card-project">
+                    <img src="assets/image/imagem-header.png" alt="">
+                    <h3 class="text-white"><b>Cashboost</b></h3>
+                    <p>Go to GitHub</p>
+                </a>
+    
+                <!-- App Troy -->
+                <a target="_blank" href="https://github.com/victormuller55/app-ferramentas-troy" class="card-project">
+                    <img src="assets/image/imagem-header.png" alt="">
+                    <h3 class="text-white"><b>App Troy</b></h3>
+                    <p>Go to GitHub</p>
+                </a>
+    
+                <!-- API System -->
+                <a target="_blank" href="https://github.com/victormuller55/api_cashboost" class="card-project">
+                    <img src="assets/image/projects/tech/tech.png" alt="">
+                    <h3 class="text-white"><b>API System</b></h3>
+                    <p>Go to GitHub</p>
+                </a>
+    
             </div>
         </div>
     </div>
-  </div>
-  <div class="modal fade" id="mini-game" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 90%; max-height: 80vh;" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title title" id="exampleModalLabel">Super Mario | Mini-Game</h5>
+    </section>
+    <section>
+      <div id="experiences" class="container pt-5 pb-5">
+        <div id="projects" style="height: 65px;"></div>
+        <h1 class="title">Experiences</h1>
+        <div id="accordion">
+          <div class="card mt-5">
+            <div class="card-header justify-content-between" id="headingOne">
+              <h5 class="mb-0">
+                <button style="text-decoration: none;" class="btn btn-link text" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  TX Fuel (03/03/2022 - 06/06/2023)
+                </button>
+              </h5>
             </div>
-            <div class="modal-body">
-              <div class="d-flex">
-                <div class="mr-3">
-                  <p><b>About This Project</b></p>
-                  <p>This mini-game was initially crafted by a YouTuber, but I implemented several modifications to elevate its gameplay experience. With the inclusion of music and sound effects, this game has been enhanced to provide hours of entertainment.</p>
-                  <hr>
-                  <p><b>Languages and Frameworks</b></p>
-                  <div>
-                    <span class="badge badge-light m-1"><img width="13" src="assets/image/icons/html.png" alt=""> HTML</span>
-                    <span class="badge badge-light m-1"><img width="13" src="assets/image/icons/css.png" alt=""> CSS</span>
-                    <span class="badge badge-light m-1"><img width="13" src="assets/image/icons/js.png" alt=""> Java Script</span>
-                  </div>
-                </div>
-                <div>
-                  <p><b>Imagens</b></p>
-                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/image/projects/mini-game/mario.png" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/image/projects/mini-game/mario.png" alt="Second slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/image/projects/mini-game/mario.png" alt="Third slide">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                During my internship at TX Fuel, I was able to enhance my skills in mobile app development, web systems, and the creation and updating of project documentation. I worked collaboratively, learning to work in a team and consistently striving to deliver exceptional results. This opportunity significantly contributed to my professional growth, enabling me to apply my knowledge in a practical manner and add value to the projects I was involved in.
               </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary button-header" data-dismiss="modal">Close</button>
-            </div>
+          </div>
         </div>
-    </div>
-  </div>
+      </div>
+    </section>
+    <section class="div-grey">
+      <div id="contact" class="container">
+        <h1 class="title-contact mb-2 text-center">Contact</h1>
+        <h1 class="text mb-4 text-center">Let's Talk?</h1>
+        <hr>
+          <div class="row justify-content-center">
+            <div class="contact-group">
+            <a target="_blank" href="mailto:victormuller050@gmail.com"><div class="circle-contact text-white m-3"><img height="35" src="assets/image/contact-icons/email.png" alt=""></div></a>
+              <p class="mt-1">E-mail</p>
+            </div>
+            <div class="contact-group">
+              <a target="_blank" href="tel:5541995919194"><div class="circle-contact text-white m-3"><img height="35" src="assets/image/contact-icons/phone.png" alt=""></div></a>
+              <p class="mt-1">Telefone</p>
+            </div>
+            <div class="contact-group">
+              <a target="_blank" href="https://api.whatsapp.com/send?phone=5541995919194"><div class="circle-contact text-white m-3"><img height="35" src="assets/image/contact-icons/whats-app.png" alt=""></div></a>
+              <p class="mt-1">WhatsApp</p>
+            </div>
+            <div class="contact-group">
+              <a target="_blank" href="https://github.com/victormuller55"><div class="circle-contact text-white m-3"><img height="35" src="assets/image/contact-icons/github.png" alt=""></div></a>
+              <p class="mt-1">GitHub</p>
+            </div>
+            <div class="contact-group">
+              <a target="_blank" href="https://www.linkedin.com/in/victor-muller-846607229/"><div class="circle-contact text-white m-3 mb-1"><img height="35" src="assets/image/contact-icons/linkedin.png" alt=""></div></a>
+              <p class="mt-1">Linkedin</p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </main>
+</body>
 </html>
