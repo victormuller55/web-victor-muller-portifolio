@@ -27,11 +27,5 @@ Open the project folder in your preferred code editor.
 ### Explore:
 Open the index.html file in your web browser to explore the portfolio website. Click on the project links to view detailed descriptions and demos.
 
-## Contribution:
-Contributions and feedback are welcome! If you have any suggestions for improvements or find any issues, feel free to open an issue or create a pull request.
-
 ## Contact:
-If you have any questions or want to get in touch, feel free to contact me via email at your-email@example.com.
-
-## License:
-This project is licensed under the MIT License - see the LICENSE file for details.
+If you have any questions or want to get in touch, feel free to contact me via email at victormuller050@gmail.com.
