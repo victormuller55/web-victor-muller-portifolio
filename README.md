@@ -17,7 +17,7 @@ This portfolio website serves as a showcase of my work and skills. It was create
 ### Clone the Repository:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/victormuller55/web-victor-muller-portifolio.git
 ```
 
 ### Open the Project:
