@@ -112,6 +112,19 @@ body {
     animation: digitar 1s steps(40);
 }
 
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: black;
+    animation: blink 1s infinite;
+    vertical-align: bottom;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+
 /* --------- ABOUT --------- */
 
 .wave {

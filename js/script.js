@@ -10,27 +10,27 @@ function isElementInViewport(elem) {
   return elemBottom <= docViewBottom && elemTop >= docViewTop;
 }
 
-  $(window).scroll(function () {
-    if (isElementInViewport($('#div-about-me'))) {
-      $('#div-about-me').addClass('active');
-    }
+$(window).scroll(function () {
+  if (isElementInViewport($("#div-about-me"))) {
+    $("#div-about-me").addClass("active");
+  }
 
-    if (isElementInViewport($(".linguages"))) {
-      $('.linguages').addClass('active');
-    }
+  if (isElementInViewport($(".linguages"))) {
+    $(".linguages").addClass("active");
+  }
 
-    if (isElementInViewport($(".card-project"))) {
-      $('.card-project').addClass('active');
-    }
+  if (isElementInViewport($(".card-project"))) {
+    $(".card-project").addClass("active");
+  }
 
-    if (isElementInViewport($("#experiences"))) {
-      $('#experiences').addClass('active');
-    }
+  if (isElementInViewport($("#experiences"))) {
+    $("#experiences").addClass("active");
+  }
 
-    if (isElementInViewport($("#contact"))) {
-      $('#contact').addClass('active');
-    }
-  });
+  if (isElementInViewport($("#contact"))) {
+    $("#contact").addClass("active");
+  }
+});
 
 // Escreve Victor Muller na Home
 
@@ -47,7 +47,7 @@ function adicionarCaractere() {
   }
 }
 
-// Coloca cor no Header ao Scroll 
+// Coloca cor no Header ao Scroll
 
 $(document).ready(function () {
   var header = $(".header");
@@ -70,36 +70,29 @@ window.onload = adicionarCaractere;
 // Ajusta Texto About Me ao tamanho da tela
 
 function adjustTextAlignment() {
-
-  var aboutMeText = document.getElementById('text-about-me');
-  var aboutMeDiv= document.getElementById('div-about-me');
+  var aboutMeText = document.getElementById("text-about-me");
+  var aboutMeDiv = document.getElementById("div-about-me");
 
   if (window.innerWidth < 980) {
-    
-    aboutMeText.classList.add('text-center');
-    aboutMeText.classList.add('ml-3');
-    aboutMeText.classList.add('mr-3');
+    aboutMeText.classList.add("text-center");
+    aboutMeText.classList.add("ml-3");
+    aboutMeText.classList.add("mr-3");
 
-    aboutMeText.classList.remove('text-left');
-    aboutMeText.classList.remove('ml-5');
+    aboutMeText.classList.remove("text-left");
+    aboutMeText.classList.remove("ml-5");
 
     aboutMeDiv.classList.remove("w-50");
-
   } else {
+    aboutMeText.classList.remove("text-center");
+    aboutMeText.classList.remove("ml-3");
+    aboutMeText.classList.remove("mr-3");
 
-    aboutMeText.classList.remove('text-center');
-    aboutMeText.classList.remove('ml-3');
-    aboutMeText.classList.remove('mr-3');
-
-    aboutMeText.classList.add('text-left');
-    aboutMeText.classList.add('ml-5');
+    aboutMeText.classList.add("text-left");
+    aboutMeText.classList.add("ml-5");
 
     aboutMeDiv.classList.add("w-50");
-
   }
 }
 
-
-
 adjustTextAlignment();
-window.addEventListener('resize', adjustTextAlignment);
+window.addEventListener("resize", adjustTextAlignment);
