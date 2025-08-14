@@ -1,0 +1,177 @@
+
+/* Componentes */
+
+.about-container {
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 200px;
+    margin-bottom: 50px;
+    padding: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.image-about {
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.hr-about {
+    margin-right: 50px;
+    margin-left: 50px;
+    transform-origin: left;
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.title-about {
+    margin-right: 50px;
+    margin-left: 50px;
+    color: rgb(255, 174, 0);
+    opacity: 0;
+    transform: translateY(30px);
+    font-weight: bold;
+}
+
+.text-about {
+    margin-right: 50px;
+    margin-left: 50px;
+    color: rgb(141, 141, 141);
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Animações dos componentes */
+
+.about-container.animate {
+    animation: borderDraw 0.5s ease forwards;
+}
+
+.about-container.animate .image-about {
+    animation: imageDrop 1s ease forwards;
+    animation-delay: 0.5s; /* após borda */
+}
+
+.about-container.animate .hr-about {
+    animation: hrDraw 0.5s ease forwards;
+    animation-delay: 1s; /* após imagem */
+}
+
+.about-container.animate .title-about {
+    animation: textUp 0.8s ease forwards;
+    animation-delay: 1.5s; /* após hr */
+}
+
+.about-container.animate .text-about {
+    animation: textUp 0.8s ease forwards;
+    animation-delay: 1.7s; /* após hr */
+}
+
+/* Icones */
+
+.social-div-about {
+    text-align: center;
+    border: rgb(136, 136, 136) 1px solid;
+    width: 80px;
+    height: 60px;
+    padding-top: 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation-fill-mode: forwards;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Animação dos icones */
+
+.about-container.animate .social-div-about {
+    animation: iconUp 0.5s ease forwards;
+}
+
+.about-container.animate .social-div-about.github {
+    animation-delay: 2.2s;
+}
+.about-container.animate .social-div-about.linkedin {
+    animation-delay: 2.4s;
+}
+.about-container.animate .social-div-about.instagram {
+    animation-delay: 2.6s;
+}
+
+/* Hover dos icones */
+
+.social-div-about.instagram:hover {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    transform: translateY(-5px); /* elevação ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-div-about.github:hover {
+    background: linear-gradient(45deg, #333, #555);
+    transform: translateY(-10px); /* elevação ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-div-about.linkedin:hover {
+    background: linear-gradient(45deg, #015685, #00b2f3);
+    transform: translateY(-5px); /* elevação ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Ajustes de tamanho de tela */
+
+@media (max-width: 1300px) {
+    .about-container {
+        margin: 50px 20px;
+        padding: 20px;
+    }
+
+    .about-container .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-about {
+        display: none;
+    }
+
+    .title-about,
+    .text-about,
+    .hr-about {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Animações */
+
+@keyframes iconUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes borderDraw {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes imageDrop {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes hrDraw {
+    0% { transform: scaleX(0); opacity: 0; }
+    100% { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes textUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

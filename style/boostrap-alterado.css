@@ -1,0 +1,36 @@
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: rgb(255, 174, 0) !important;
+}
+
+.navbar {
+    background-color: #1b1b1b;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1; /* para ficar acima dos símbolos */
+}
+
+.center-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.center-text p {
+    margin: 0;
+}

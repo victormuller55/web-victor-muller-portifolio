@@ -3,489 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Victor Muller | Desenvolvedor Mobile</title>
 
-    <link rel="stylesheet" href="style/bootstrap.css" />
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="icon" href="assets/image/icons/dev.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="style/style-main.css" />
+    <link rel="stylesheet" href="style/style-about.css" />
+    <link rel="stylesheet" href="style/style-linguagens.css" />
+    <link rel="stylesheet" href="style/boostrap-alterado.css" />
   </head>
   <body>
+
     <button
       type="button"
-      class="btn btn-primary button-whats-app fixed-bottom fixed-left mb-3 ml-3"
+      class="button-whats-app fixed-bottom fixed-right mb-3"
       data-toggle="tooltip"
       data-placement="right"
       title="Entre em contato via WhatsApp"
       onclick="window.location.href='https://api.whatsapp.com/send?phone=5541995919194'"
-    >
-      <img src="assets/image/logo-whats-app.png" alt="" />
+    ><img src="image/logo-whats-app.png" alt="" />
     </button>
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top header">
-        <div class="container">
-          <a class="navbar-brand text-white" href="#"
-            ><h5 class="pt-1"><b>Victor Muller</b></h5></a
-          >
-          <button
-            class="navbar-toggler navbar-light"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <img width="30" src="assets/image/icons/menu.png" alt="" />
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white font-header-options scroll-link"
-                  href="#about"
-                  ><b>Sobre</b></a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white font-header-options scroll-link"
-                  href="#projects"
-                  ><b>Projetos</b></a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white font-header-options scroll-link"
-                  href="#experiences"
-                  ><b>Experiencias</b></a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white font-header-options scroll-link"
-                  href="#contact"
-                  ><b>Fale Comigo</b></a
-                >
-              </li>
-              <li class="nav-item">
-                <button
-                  type="button"
-                  onclick="window.open('https://github.com/victormuller55', '_blank')"
-                  class="btn btn-primary button-rouded header github border animate-show-3-sec ml-3 d-none d-lg-block"
-                >
-                  <b>GitHub</b>
-                </button>
-              </li>
-              <li class="nav-item">
-                <button
-                  type="button"
-                  onclick="window.open('https://www.linkedin.com/in/victor-muller-846607229/', '_blank')"
-                  class="btn btn-primary button-rouded header linkedin border animate-show-3-sec ml-3 d-none d-lg-block"
-                >
-                  <b>LinkedIn</b>
-                </button>
-              </li>
-            </ul>
-          </div>
+
+    <!-- Menu fixo no topo -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre"><b>Sobre</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos"><b>Projetos</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencias"><b>Experiências</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#fale-comigo"><b>Fale Comigo</b></a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div
-        class="image-header d-flex flex-column align-items-center justify-content-center text-center"
-      >
-        <h1 id="texto-digitado" class="text-white ml-5 mr-5"><span class="cursor"></h1>
-        <p class="text-white ml-5 mr-5 animate-show-3-sec">
+      </div>
+    </nav>
+
+    <!-- Floating Symbols -->
+    <div class="floating-symbols">
+      <div class="center-text">
+        <h1 id="texto-digitado" class="text-white mb-3"><b>Victor Muller</b></h1>
+        <hr>
+        <p class="text-white ml-5 mr-5">
           DESENVOLVEDOR MOBILE | ENGENHEIRO DE SOFTWARE
         </p>
         <div>
           <button
             type="button"
             onclick="window.location.href='#contact'"
-            class="btn btn-primary button-rouded mt-3 animate-show-3-sec mr-1"
-          >
-            Fale Comigo
-          </button>
+            class="btn btn-frosted mt-3 mr-1"
+          >Fale Comigo</button>
+
           <button
             type="button"
             onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf', '_blank')"
-            class="btn btn-primary button-rouded mt-3 animate-show-3-sec ml-1"
-          >
-            Ver Curriculo
-          </button>
+            class="btn btn-frosted mt-3 ml-1"
+          >Ver Currículo</button>
         </div>
-        <p class="text-white ml-5 mr-5 mt-5">Role para ver mais</p>
-        <img width="30" src="assets/image/icons/arrow_down.png" alt="" />
+        <p class="text-white ml-5 mr-5 mt-3 mb-3">Role para ver mais</p>
+        <img width="30" src="image/icons/arrow_down.png" alt="" />
       </div>
-      <section>
-        <div class="wave about">
-          <div style="height: 150px" id="about"></div>
-          <h2 class="text-center title">Sobre mim</h2>
-          <div id="div-about-me" class="container mx-auto mt-5">
-            <div class="d-flex">
-              <img
-                id="minha-foto"
-                class="rounded-circle"
-                width="90"
-                height="90"
-                src="assets/image/me.png"
-                alt=""
-              />
-              <h5 id="text-about-me" class="text-left mb-4 ml-5 text">
-                Olá, sou o Victor e sou desenvolvedor de software com
-                experiência em Flutter e Java. Tenho uma formação sólida em
-                Engenharia de Software e sou apaixonado por criar soluções
-                inovadoras que atendam às necessidades dos meus clientes. Se
-                você busca um profissional para transformar suas ideias em um
-                projeto funcional e de alta qualidade, estou aqui para ajudar.
+
+      <!-- Simbolos -->
+      <span>&lt;/&gt;</span>
+      <span>{ }</span>
+      <span>&lt;h1&gt;</span>
+      <span>()</span>
+      <span>=&gt;</span>
+      <span>var</span>
+      <span>if()</span>
+      <span>while()</span>
+      <span>return</span>
+      <span>&lt;div&gt;</span>
+      <span>console.log()</span>
+      <span>let</span>
+      <span>const</span>
+      <span>style.css</span>
+      <span>script.js</span>
+       <span>&lt;h1&gt;</span>
+      <span>()</span>
+      <span>=&gt;</span>
+      <span>while()</span>
+      <span>return</span>
+      <span>&lt;div&gt;</span>
+      <span>let</span>
+      <span>const</span>
+    </div>
+
+    <!-- Sobre mim -->
+    <section id="sobre" style="height: 80vh;">
+        <div  class="about-container">
+          <div class="d-flex">
+            <img
+              id="minha-foto"
+              class="image-about"
+              height="460"
+              src="/image/me.png"
+              alt=""
+            />
+            <div style="padding-top: 40px;">
+              <h2 class="title-about">Sobre mim</h2>
+              <hr class="hr-about" style="color: white;">
+              <h5 class="text-about">
+                Oi! Eu sou <strong class="text-white">Victor Muller</strong>, desenvolvedor de software com experiência em Flutter e Java,
+                formado em Engenharia de Software. Adoro transformar ideias em projetos
+                funcionais e de alta qualidade, sempre pensando em quem vai usar.
+                Gosto de criar soluções que sejam úteis, bonitas e confiáveis, e estou sempre em busca
+                de aprender algo novo e inovar. Se você quer alguém que realmente se importa com cada
+                detalhe do seu projeto, chegou ao lugar certo!
               </h5>
-            </div>
-          </div>
-        </div>
-        <div id="linguages">
-          <h4 class="text-center mt-4 mb-4">Languagens e Frameworks</h4>
-          <div class="container-fluid">
-            <div class="justify-content-center row">
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                ><div
-                  id="l1"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/html.png"
-                    alt=""
-                  /><br />HTML
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                ><div
-                  id="l2"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/css.png"
-                    alt=""
-                  /><br />CSS
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                ><div
-                  id="l3"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/js.png"
-                    alt=""
-                  /><br />JS
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://docs.flutter.dev/"
-                ><div
-                  id="l4"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/flutter.png"
-                    alt=""
-                  /><br />FLUTTER
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://docs.oracle.com/en/java/"
-                ><div
-                  id="l5"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/java.png"
-                    alt=""
-                  /><br />JAVA
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://dart.dev/guides"
-                ><div
-                  id="l6"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/dart.png"
-                    alt=""
-                  /><br />DART
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://www.php.net/"
-                ><div
-                  id="l7"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/php.png"
-                    alt=""
-                  /><br />PHP
-                </div></a
-              >
-              <a
-                style="text-decoration: none"
-                target="_blank"
-                href="https://spring.io/projects/spring-boot"
-                ><div
-                  id="l8"
-                  class="linguages mr-2 mt-2 text-dark text-center pt-4"
-                >
-                  <img
-                    class="mb-2"
-                    src="assets/image/icons/spring-boot.png"
-                    alt=""
-                  /><br />SPRING
-                </div></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div id="projects" style="height: 65px"></div>
-        <div class="pt-3 pb-3 div-grey">
-          <h1 class="container mb-5 mt-5 title">Meus projetos</h1>
-          <div class="container mb-3">
-            <div class="row justify-content-center">
-              <!-- Portifolio -->
-              <a
-                target="_blank"
-                href="https://github.com/victormuller55/victor-muller-portifolio"
-                class="card-project"
-              >
-                <img
-                  src="assets/image/projects/portifolio/portifolio2.png"
-                  alt=""
-                />
-                <h3 class="text-white"><b>Portifolio</b></h3>
-                <p>Ir para GitHub</p>
-              </a>
-
-              <!-- Mini-Game -->
-              <a
-                target="_blank"
-                href="https://github.com/victormuller55/mario_mini_game"
-                class="card-project"
-              >
-                <img src="assets/image/projects/mini-game/mario.png" alt="" />
-                <h3 class="text-white"><b>Mini-Game</b></h3>
-                <p>Ir para GitHub</p>
-              </a>
-
-              <!-- Cashboost -->
-              <a
-                target="_blank"
-                href="https://github.com/victormuller55/app_cashboost"
-                class="card-project"
-              >
-                <img src="assets/image/imagem-header.png" alt="" />
-                <h3 class="text-white"><b>Cashboost</b></h3>
-                <p>Ir para GitHub</p>
-              </a>
-
-              <!-- App Troy -->
-              <a
-                target="_blank"
-                href="https://github.com/victormuller55/app-ferramentas-troy"
-                class="card-project"
-              >
-                <img src="assets/image/imagem-header.png" alt="" />
-                <h3 class="text-white"><b>App Troy</b></h3>
-                <p>Ir para GitHub</p>
-              </a>
-
-              <!-- API System -->
-              <a
-                target="_blank"
-                href="https://github.com/victormuller55/api_cashboost"
-                class="card-project"
-              >
-                <img src="assets/image/projects/tech/tech.png" alt="" />
-                <h3 class="text-white"><b>API System</b></h3>
-                <p>Go to GitHub</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div id="experiences" class="container pt-5 pb-5">
-          <div id="projects" style="height: 65px"></div>
-          <h1 class="title">Experiencias</h1>
-          <div id="accordion">
-            <div class="card mt-5">
-              <div class="card-header justify-content-between" id="headingOne">
-                <h5 class="mb-0">
-                  <button
-                    style="text-decoration: none"
-                    class="btn btn-link text"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                  TX Fuel (03/03/2022 - 06/06/2023)
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseOne"
-                class="collapse show"
-                aria-labelledby="headingOne"
-                data-parent="#accordion"
-              >
-                <div class="card-body">
-                  Durante o meu estágio na TX Fuel, pude aprimorar minhas habilidades em desenvolvimento de aplicativos móveis, sistemas web e na criação e atualização de documentação de projetos. Trabalhei de forma colaborativa, aprendendo a importância do trabalho em equipe e sempre buscando entregar resultados excepcionais. Essa oportunidade contribuiu significativamente para o meu crescimento profissional, permitindo-me aplicar meus conhecimentos de forma prática e agregar valor aos projetos nos quais estive envolvido.
+              <div class="row container mt-4 justify-content-start" style="margin-left: 40px;">
+                  <div class="social-div-about github">
+                      <img src="image/icons/github.svg" alt="GitHub" width="30" height="30">
+                  </div>
+                  <div class="social-div-about linkedin">
+                      <img src="image/icons/linkedin.svg" alt="LinkedIn" width="30" height="30">
+                  </div>
+                  <div class="social-div-about instagram">
+                      <img src="image/icons/instagram.svg" alt="Instagram" width="30" height="30">
+                  </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-header justify-content-between" id="headingOne">
-                <h5 class="mb-0">
-                  <button
-                    style="text-decoration: none"
-                    class="btn btn-link text"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="true"
-                    aria-controls="collapseTwo"
-                  >
-                    Evo S.I (22/07/2024 - Atualmente) 
-                  </button>
-                </h5>
-              </div>
-              <div
-                id="collapseTwo"
-                class="collapse show"
-                aria-labelledby="headingTwo"
-                data-parent="#accordion"
-              >
-                <div class="card-body">
-                  Atualmente, trabalho na Evo Sistemas Inteligentes, onde atuo no desenvolvimento e manutenção de soluções empresariais com foco em qualidade e performance. Utilizo tecnologias como Flutter e Java, além de participar ativamente de code reviews, contribuindo para a melhoria contínua do código de outros desenvolvedores da equipe. Também trabalho com metodologias ágeis, colaborando em um ambiente dinâmico que estimula o aprendizado e a evolução constante. Estou sempre em busca das melhores soluções para entregar projetos eficientes e que realmente façam a diferença para os nossos clientes.
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <section class="div-grey">
-        <div id="contact" class="container">
-          <h1 class="title-contact mb-2 text-center">Contato</h1>
-          <h1 class="text mb-4 text-center">Vamos conversar?</h1>
-          <hr />
-          <div class="row justify-content-center">
-            <div class="contact-group">
-              <a target="_blank" href="mailto:victormuller050@gmail.com"
-                ><div class="circle-contact text-white m-3">
-                  <img
-                    height="35"
-                    src="assets/image/contact-icons/email.png"
-                    alt=""
-                  /></div
-              ></a>
-              <p class="mt-1">E-mail</p>
-            </div>
+    </div>
 
-            <div class="contact-group">
-              <a target="_blank" href="tel:5541995919194"
-                ><div class="circle-contact text-white m-3">
-                  <img
-                    height="35"
-                    src="assets/image/contact-icons/phone.png"
-                    alt=""
-                  /></div
-              ></a>
-              <p class="mt-1">Telefone</p>
-            </div>
+    <div class="linguagens-container mt-4">
 
-            <div class="contact-group">
-              <a
-                target="_blank"
-                href="https://api.whatsapp.com/send?phone=5541995919194"
-                ><div class="circle-contact text-white m-3">
-                  <img
-                    height="35"
-                    src="assets/image/contact-icons/whats-app.png"
-                    alt=""
-                  /></div
-              ></a>
-              <p class="mt-1">WhatsApp</p>
-            </div>
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/flutter.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">Flutter</p>
+      </div>
 
-            <div class="contact-group">
-              <a target="_blank" href="https://github.com/victormuller55"
-                ><div class="circle-contact text-white m-3">
-                  <img
-                    height="35"
-                    src="assets/image/contact-icons/github.png"
-                    alt=""
-                  /></div
-              ></a>
-              <p class="mt-1">GitHub</p>
-            </div>
+       <div class="lingagem-div pt-4">
+        <img src="image/icons/dart.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">Dart</p>
+      </div>
 
-            <div class="contact-group">
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/victor-muller-846607229/"
-                ><div class="circle-contact text-white m-3 mb-1">
-                  <img
-                    height="35"
-                    src="assets/image/contact-icons/linkedin.png"
-                    alt=""
-                  /></div
-              ></a>
-              <p class="mt-1">Linkedin</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <script src="js/script.js"></script>
-    </main>
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/java.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">Java</p>
+      </div>
+
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/spring.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">Spring Boot</p>
+      </div>
+
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/html.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">HTML</p>
+      </div>
+
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/css.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">CSS</p>
+      </div>
+
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/js.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">JavaScript</p>
+      </div>
+
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/php.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">PHP</p>
+      </div>
+
+      <div class="lingagem-div pt-4">
+        <img src="image/icons/angular.svg" alt="Flutter" width="60" height="60">
+        <p class="text-white mt-2">Angular</p>
+      </div>
+    
+    </div>
+    </section>
+
+    <script src="script/animations.js"></script>
+    <script src="script/script2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
