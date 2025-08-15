@@ -18,11 +18,22 @@
     cursor: pointer; 
 }
 
+.lingagem-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex; /* mantém o tamanho do card */
+}
+
+.lingagem-link:hover {
+    text-decoration: none;
+}
+
 .lingagem-div.animate {
     transform: rotateX(0deg);
 }
 
 .lingagem-div:hover {
+    text-decoration: none;
     transform: translateY(-15px) rotateX(0deg);
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);

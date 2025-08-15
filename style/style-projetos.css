@@ -67,6 +67,17 @@
     background: rgba(75, 75, 75, 0.3);
 }
 
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; /* mantém o tamanho do card */
+}
+
+.contact-link:hover {
+  text-decoration: none;
+}
+
+
 /* Imagem inicial */
 .img-projetos {
     opacity: 0;

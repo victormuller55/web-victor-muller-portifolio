@@ -89,8 +89,26 @@
     cursor: pointer;
 }
 
-/* Animação dos icones */
+/* Hover dos icones */
+.social-div-about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
+.social-div-about.github:hover {
+    background: linear-gradient(45deg, #333, #555);
+    transform: translateY(-10px);
+}
+
+.social-div-about.linkedin:hover {
+    background: linear-gradient(45deg, #015685, #00b2f3);
+}
+
+.social-div-about.instagram:hover {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* Animações */
 .about-container.animate .social-div-about {
     animation: iconUp 0.5s ease forwards;
 }
@@ -105,25 +123,6 @@
     animation-delay: 2.6s;
 }
 
-/* Hover dos icones */
-
-.social-div-about.instagram:hover {
-    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    transform: translateY(-5px); /* elevação ao passar o mouse */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.social-div-about.github:hover {
-    background: linear-gradient(45deg, #333, #555);
-    transform: translateY(-10px); /* elevação ao passar o mouse */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.social-div-about.linkedin:hover {
-    background: linear-gradient(45deg, #015685, #00b2f3);
-    transform: translateY(-5px); /* elevação ao passar o mouse */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
 
 /* Ajustes de tamanho de tela */
 

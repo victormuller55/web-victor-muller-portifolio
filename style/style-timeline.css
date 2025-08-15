@@ -1,0 +1,148 @@
+/* TIMELINE CARD */
+.timeline-card {
+  position: relative;
+  width: 40%;
+  background: #2a2a2a;
+  color: white;
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* começa invisível */
+  transform: translateY(30px); /* começa deslocado para baixo */
+  transition: all 0.6s ease;
+}
+
+.timeline-card.show {
+  opacity: 1;
+  transform: translateY(0); /* volta à posição normal */
+}
+
+.timeline-card.left {
+  left: calc(50% - 42%);
+}
+
+.timeline-card.right {
+  left: calc(50% + 2%);
+}
+
+.title-timeline {
+  opacity: 0;
+  color: rgb(255, 174, 0);
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.title-timeline.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hr-timeline {
+  border: none;
+  height: 1px;
+  width: 0%;
+  background-color: rgb(85, 85, 85);
+  margin: 10px 0 30px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  margin-bottom: 100px;
+}
+
+.hr-timeline.show {
+  opacity: 1;
+  width: 100%;
+  transform: translateY(0);
+}
+
+/* Resto do CSS mantém seu estilo */
+.card-date { 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: rgb(255, 174, 0); 
+  margin-bottom: 8px; 
+}
+
+.card-title { 
+  font-size: 20px; 
+  color: rgb(255, 174, 0); 
+  margin: 0 0 5px; 
+}
+
+.card-location { 
+  font-size: 14px; 
+  font-style: italic; 
+  color: #bbbbbb; 
+  margin-bottom: 10px; 
+}
+
+.card-description { 
+  font-size: 14px; 
+  line-height: 1.5; 
+  margin-bottom: 10px; 
+}
+
+.card-skills { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+}
+
+.card-skills li { 
+  background: rgb(255, 174, 0); 
+  color: black; 
+  padding: 5px 10px; 
+  border-radius: 8px; 
+  font-size: 12px; 
+  font-weight: bold; 
+}
+
+/* TIMELINE */
+.timeline-section { 
+  position: relative; 
+  padding: 50px 0; 
+  background: #202020; 
+  min-height: 100vh; 
+}
+
+.timeline-line { 
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 4px; 
+  height: 85%; 
+  background-color: rgb(255, 174, 0); 
+}
+
+/* RESPONSIVO: telas menores que 1000px */
+@media (max-width: 1000px) {
+  /* Oculta a linha central */
+  .timeline-line {
+    display: none;
+  }
+
+  /* Ajusta o container para usar flexbox */
+  .timeline-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajusta os cards para centralizar e ocupar 90% da largura */
+  .timeline-card {
+    width: 90% !important;
+    left: auto !important;
+    transform: translateY(30px); /* mantém animação vertical */
+    margin: 20px 0;
+  }
+
+  /* Remove distinção left/right */
+  .timeline-card.left,
+  .timeline-card.right {
+    left: auto !important;
+  }
+}

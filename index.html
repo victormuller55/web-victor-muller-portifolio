@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="style/style-about.css" />
     <link rel="stylesheet" href="style/style-linguagens.css" />
     <link rel="stylesheet" href="style/style-projetos.css" />
+    <link rel="stylesheet" href="style/style-timeline.css" />
+    <link rel="stylesheet" href="style/style-contact.css" />
     <link rel="stylesheet" href="style/boostrap-alterado.css" />
   </head>
   <body>
@@ -31,25 +33,46 @@
       title="Entre em contato via WhatsApp"
       onclick="window.location.href='https://api.whatsapp.com/send?phone=5541995919194'"
     >
-      <img src="image/logo-whats-app.png" alt="" />
+      <img src="image/logo-whats-app.png" alt="WhatsApp" />
     </button>
 
     <!-- Menu fixo no topo -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="background-color: #111111"
+    >
       <div class="container">
-        <div class="collapse navbar-collapse justify-content-center">
+        <a class="navbar-brand fw-bold" href="#">Victor Muller</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarResponsive"
+        >
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre"><b>Sobre</b></a>
+            <li class="nav-item mx-2">
+              <a class="nav-link menu-link" href="#sobre">Sobre</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projetos"><b>Projetos</b></a>
+            <li class="nav-item mx-2">
+              <a class="nav-link menu-link" href="#projetos">Projetos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experiencias"><b>Experiências</b></a>
+            <li class="nav-item mx-2">
+              <a class="nav-link menu-link" href="#experiencias"
+                >Experiências</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#fale-comigo"><b>Fale Comigo</b></a>
+            <li class="nav-item mx-2">
+              <a class="nav-link menu-link" href="#fale-comigo">Fale Comigo</a>
             </li>
           </ul>
         </div>
@@ -69,7 +92,7 @@
         <div>
           <button
             type="button"
-            onclick="window.location.href='#contact'"
+            onclick="window.location.href='#fale-comigo'"
             class="btn btn-frosted mt-3 mr-1"
           >
             Fale Comigo
@@ -88,6 +111,7 @@
       </div>
 
       <!-- Simbolos -->
+       
       <span>&lt;/&gt;</span>
       <span>{ }</span>
       <span>&lt;h1&gt;</span>
@@ -112,7 +136,9 @@
       <span>let</span>
       <span>const</span>
     </div>
+
     <!-- Sobre mim -->
+
     <div id="sobre"></div>
     <section>
       <div class="about-container">
@@ -137,118 +163,91 @@
               inovar. Se você quer alguém que realmente se importa com cada
               detalhe do seu projeto, chegou ao lugar certo!
             </h5>
-            <div
-              class="row container mt-4 justify-content-start"
-              style="margin-left: 40px"
-            >
-              <div class="social-div-about github">
-                <img
-                  src="image/icons/github.svg"
-                  alt="GitHub"
-                  width="30"
-                  height="30"
-                />
-              </div>
-              <div class="social-div-about linkedin">
-                <img
-                  src="image/icons/linkedin.svg"
-                  alt="LinkedIn"
-                  width="30"
-                  height="30"
-                />
-              </div>
-              <div class="social-div-about instagram">
-                <img
-                  src="image/icons/instagram.svg"
-                  alt="Instagram"
-                  width="30"
-                  height="30"
-                />
-              </div>
+            <div class="row container mt-4 justify-content-start" style="margin-left: 40px;">
+              <a href="https://github.com/victormuller55" target="_blank" rel="noopener noreferrer" class="social-div-about github">
+                <img src="image/icons/github.svg" alt="GitHub" width="30" height="30" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/victormuller55/" target="_blank" rel="noopener noreferrer" class="social-div-about linkedin">
+                <img src="image/icons/linkedin.svg" alt="LinkedIn" width="30" height="30" />
+              </a>
+
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-div-about instagram">
+                <img src="image/icons/instagram.svg" alt="Instagram" width="30" height="30" />
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="linguagens-container mt-4">
-        <div class="lingagem-div pt-4">
-          <img
-            src="image/icons/flutter.svg"
-            alt="Flutter"
-            width="60"
-            height="60"
-          />
-          <p class="text-white mt-2">Flutter</p>
-        </div>
+        <a href="https://docs.flutter.dev/" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/flutter.svg" alt="Flutter" width="60" height="60" />
+            <p class="text-white mt-2">Flutter</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img
-            src="image/icons/dart.svg"
-            alt="Flutter"
-            width="60"
-            height="60"
-          />
-          <p class="text-white mt-2">Dart</p>
-        </div>
+        <a href="https://dart.dev/guides" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/dart.svg" alt="Dart" width="60" height="60" />
+            <p class="text-white mt-2">Dart</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img
-            src="image/icons/java.svg"
-            alt="Flutter"
-            width="60"
-            height="60"
-          />
-          <p class="text-white mt-2">Java</p>
-        </div>
+        <a href="https://docs.oracle.com/en/java/" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/java.svg" alt="Java" width="60" height="60" />
+            <p class="text-white mt-2">Java</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img
-            src="image/icons/spring.svg"
-            alt="Flutter"
-            width="60"
-            height="60"
-          />
-          <p class="text-white mt-2">Spring Boot</p>
-        </div>
+        <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/spring.svg" alt="Spring Boot" width="60" height="60" />
+            <p class="text-white mt-2">Spring Boot</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img
-            src="image/icons/html.svg"
-            alt="Flutter"
-            width="60"
-            height="60"
-          />
-          <p class="text-white mt-2">HTML</p>
-        </div>
+        <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/html.svg" alt="HTML" width="60" height="60" />
+            <p class="text-white mt-2">HTML</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img src="image/icons/css.svg" alt="Flutter" width="60" height="60" />
-          <p class="text-white mt-2">CSS</p>
-        </div>
+        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/css.svg" alt="CSS" width="60" height="60" />
+            <p class="text-white mt-2">CSS</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img src="image/icons/js.svg" alt="Flutter" width="60" height="60" />
-          <p class="text-white mt-2">JavaScript</p>
-        </div>
+        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/js.svg" alt="JavaScript" width="60" height="60" />
+            <p class="text-white mt-2">JavaScript</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img src="image/icons/php.svg" alt="Flutter" width="60" height="60" />
-          <p class="text-white mt-2">PHP</p>
-        </div>
+        <a href="https://www.php.net/docs.php" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/php.svg" alt="PHP" width="60" height="60" />
+            <p class="text-white mt-2">PHP</p>
+          </div>
+        </a>
 
-        <div class="lingagem-div pt-4">
-          <img
-            src="image/icons/angular.svg"
-            alt="Flutter"
-            width="60"
-            height="60"
-          />
-          <p class="text-white mt-2">Angular</p>
-        </div>
+        <a href="https://angular.dev/overview" target="_blank" class="lingagem-link">
+          <div class="lingagem-div pt-4">
+            <img src="image/icons/angular.svg" alt="Angular" width="60" height="60" />
+            <p class="text-white mt-2">Angular</p>
+          </div>
+        </a>
       </div>
     </section>
-    <div id="projetos" style="height: 100px"></div>
-    <section style="height: 100vh">
+
+    <div id="projetos" style="height: 50px"></div>
+    <section>
       <div class="div-projetos">
         <div class="container">
           <h1 class="title-projetos"><b>Meus Projetos</b></h1>
@@ -273,10 +272,10 @@
                   </p>
                   <button
                     type="button"
-                    onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf', '_blank')"
+                    onclick="window.open('https://www.figma.com/design/xhLqdBo5oRX1ajwi308W8T/PROT%C3%93TIPO---Scissor?node-id=0-1&t=gBDCFinP8nUgDSUm-1', '_blank')"
                     class="btn btn-frosted-card-projetos mt-3 ml-1"
                   >
-                    Ver no GitHub
+                    Ver no Figma
                     <img
                       src="image/icons/arrow-right.svg"
                       alt="GitHub"
@@ -305,10 +304,10 @@
                   </p>
                   <button
                     type="button"
-                    onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf', '_blank')"
+                    onclick="window.open('https://www.figma.com/design/gAWTbsFDBBFoEqOUkne4Lx/TRIPWAY?node-id=0-1&t=NUaHhIB2RVQeM9w2-1', '_blank')"
                     class="btn btn-frosted-card-projetos mt-3 ml-1"
                   >
-                    Ver no GitHub
+                    Ver no Figma
                     <img
                       src="image/icons/arrow-right.svg"
                       alt="GitHub"
@@ -339,10 +338,10 @@
                   </p>
                   <button
                     type="button"
-                    onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf', '_blank')"
+                    onclick="window.open('https://www.figma.com/design/xSnbwsAGqneROnbKnTHbhH/Cashback---SOAMER?node-id=0-1&t=LG1wkEeNBiBNhcdl-1', '_blank')"
                     class="btn btn-frosted-card-projetos mt-3 ml-1"
                   >
-                    Ver no GitHub
+                    Ver no Figma
                     <img
                       src="image/icons/arrow-right.svg"
                       alt="GitHub"
@@ -377,7 +376,7 @@
                     onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf', '_blank')"
                     class="btn btn-frosted-card-projetos mt-3 ml-1"
                   >
-                    Ver no GitHub
+                    Ver no Figma
                     <img
                       src="image/icons/arrow-right.svg"
                       alt="GitHub"
@@ -394,8 +393,183 @@
       </div>
     </section>
 
+    <div id="experiencias" style="height: 50px"></div>
+    <section class="timeline-section" id="experiencias">
+      <div class="container">
+        <h1 class="title-timeline"><b>Minha Linha do tempo</b></h1>
+        <hr class="hr-timeline" />
+      </div>
+      <div class="timeline-line"></div>
+
+      <!-- CARD ESQUERDA -->
+      <div class="timeline-card left">
+        <div class="card-date">Outubro de 2020</div>
+        <h3 class="card-title">Começando no mundo da programação</h3>
+        <div class="card-location">Curso da Alura</div>
+        <p class="card-description">
+          Iniciei minha jornada na programação com um curso introdutório na
+          Alura, onde aprendi os fundamentos de lógica de programação e
+          algoritmos, despertando meu interesse por desenvolvimento de software.
+        </p>
+        <ul class="card-skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+        </ul>
+      </div>
+
+      <!-- CARD DIREITA -->
+      <div class="timeline-card right">
+        <div class="card-date">Jun 2021 - Jun 2023</div>
+        <h3 class="card-title">Estágiario de Desenvolvimento</h3>
+        <div class="card-location">TX Fuel</div>
+        <p class="card-description">
+          Atuei no desenvolvimento de sistemas e aplicativos para web e mobile
+          usando Flutter e Dart, além de colaborar com integrações em Java.
+          Durante o estágio, aprendi na prática sobre desenvolvimento de
+          software, boas práticas de codificação e a importância da documentação
+          técnica para manter os sistemas organizados e funcionando bem.
+        </p>
+        <ul class="card-skills">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>PostgreSQL</li>
+          <li>Java</li>
+          <li>Git</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+
+      <div class="timeline-card left">
+        <div class="card-date">Fev 2022</div>
+        <h3 class="card-title">Iniciando a vida academica</h3>
+        <div class="card-location">Engenharia de software - UniSenai CIC</div>
+        <p class="card-description">
+          Iniciei minha graduação em Engenharia de Software na UniSenai CIC,
+          onde aprofundei meus conhecimentos em desenvolvimento de software,
+          arquitetura de sistemas e metodologias ágeis. Durante o curso,
+          participei de projetos práticos que me permitiram aplicar os conceitos
+          aprendidos em sala de aula.
+        </p>
+        <ul class="card-skills">
+          <li>Metodologias ágeis</li>
+          <li>Estrutura de software</li>
+          <li>SQL</li>
+          <li>Projetos para empresas</li>
+        </ul>
+      </div>
+
+      <div class="timeline-card right">
+        <div class="card-date">Jun 2024</div>
+        <h3 class="card-title">
+          Premio de 3° Lugar na Categoria Pequena Empresa
+        </h3>
+        <div class="card-location">UniSenai - Jornada de Aprendizagem</div>
+        <p class="card-description">
+          Recebi o 3° lugar na categoria Pequena Empresa através de uma
+          disciplina do UniSenai, em que realizamos um projeto de software para
+          uma empresa parceira do Senai, que nos escolheu como o melhor projeto
+          da turma e decidiu implementar a solução desenvolvida.
+        </p>
+        <ul class="card-skills">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>PostgreSQL</li>
+          <li>Java</li>
+          <li>Git</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+
+      <div class="timeline-card left">
+        <div class="card-date">Jul 2024 - Jun 2025</div>
+        <h3 class="card-title">Desenvolvedor Junior</h3>
+        <div class="card-location">Evo Sistemas Inteligentes</div>
+        <p class="card-description">
+          Desenvolvi funcionalidades em Flutter, com foco em performance e
+          experiência do usuário, utilizando BLoC para organização e
+          escalabilidade. Integrei APIs em Java com Spring Boot e trabalhei com
+          Redis, Kafka e MySQL. Participei da revisão de código, garantindo
+          qualidade e boas práticas.
+        </p>
+        <ul class="card-skills">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Spring Boot</li>
+          <li>Redis</li>
+          <li>Kafka</li>
+          <li>Git</li>
+        </ul>
+      </div>
+
+      <div class="timeline-card right">
+        <div class="card-date">Jun 2025 - Jul 2025</div>
+        <h3 class="card-title">Desenvolvedor Junior</h3>
+        <div class="card-location">Infoline System</div>
+        <p class="card-description">
+          Responsável pelo desenvolvimento de software ERP utilizando Angular no
+          frontend e Spring no backend, além da criação de aplicativos móveis
+          com Flutter e Dart, garantindo integração eficiente com o sistema ERP.
+        </p>
+        <ul class="card-skills">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>PostgreSQL</li>
+          <li>Java</li>
+          <li>Git</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="fale-comigo" class="contact-container">
+      <div class="contact-header">
+        <h1 class="title-contact"><b>Fale Comigo</b></h1>
+        <hr class="hr-contact" />
+      </div>
+
+      <div class="row-contact">
+        <a href="mailto:victormuller050@gmail.com" class="contact-link">
+          <div class="card-contact email">
+            <img class="mb-2" height="50" src="image/contact-icons/email.png" alt="E-mail" />
+            E-mail
+          </div>
+        </a>
+
+        <a href="https://github.com/victormuller55" target="_blank" class="contact-link">
+          <div class="card-contact github">
+            <img class="mb-2" height="50" src="image/contact-icons/github.png" alt="GitHub" />
+            GitHub
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/victormuller55/" target="_blank" class="contact-link">
+          <div class="card-contact linkedin">
+            <img class="mb-2" height="50" src="image/contact-icons/linkedin.png" alt="LinkedIn" />
+            LinkedIn
+          </div>
+        </a>
+
+        <a href="tel:+5541995919194" class="contact-link">
+          <div class="card-contact phone">
+            <img class="mb-2" height="50" src="image/contact-icons/phone.png" alt="Telefone" />
+            Telefone
+          </div>
+        </a>
+
+        <a href="https://wa.me/5541995919194" target="_blank" class="contact-link">
+          <div class="card-contact whatsapp">
+            <img class="mb-2" height="50" src="image/contact-icons/whats-app.png" alt="WhatsApp" />
+            WhatsApp
+          </div>
+        </a>
+      </div>
+    </section>
+
+
     <script src="script/animations.js"></script>
-    <script src="script/script2.js"></script>
+    <script src="script/symbols.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

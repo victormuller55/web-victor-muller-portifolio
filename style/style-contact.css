@@ -1,0 +1,115 @@
+.contact-container {
+    background-color: rgb(41, 41, 41);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-header {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 30px;
+}
+
+.title-contact {
+    opacity: 0;
+    color: rgb(255, 174, 0);
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.title-contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hr-contact {
+    border: none;
+    height: 1px;
+    width: 0%;
+    background-color: rgb(85, 85, 85);
+    margin: 10px 0 30px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.hr-contact.show {
+    opacity: 1;
+    width: 100%;
+    transform: translateY(0);
+}
+
+@media (max-width: 1300px) {
+   .contact-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Centraliza os cards e adiciona espaçamento entre eles */
+.row-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cards */
+    align-items: center; /* Centraliza verticalmente os cards */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card-contact {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(39, 39, 39, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.4s ease, transform 0.3s ease, opacity 0.6s ease;
+    opacity: 0; /* inicia invisível */
+    transform: translateY(20px); /* inicia levemente abaixo */
+}
+
+/* Gradientes e brilho individual no hover */
+.card-contact.email:hover {
+    background: linear-gradient(135deg, #D44638, #FF6F61);
+    box-shadow: 0 0 20px #D44638, 0 0 40px #FF6F61;
+}
+
+.card-contact.github:hover {
+    background: linear-gradient(135deg, #333333, #6e5494);
+    box-shadow: 0 0 20px #333333, 0 0 40px #6e5494;
+}
+
+.card-contact.linkedin:hover {
+    background: linear-gradient(135deg, #0077B5, #00A0DC);
+    box-shadow: 0 0 20px #0077B5, 0 0 40px #00A0DC;
+}
+
+.card-contact.phone:hover {
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+    box-shadow: 0 0 20px #4CAF50, 0 0 40px #81C784;
+}
+
+.card-contact.whatsapp:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    box-shadow: 0 0 20px #25D366, 0 0 40px #128C7E;
+}
+
+/* Pequena animação ao mover para cima */
+.card-contact:hover {
+    transform: translateY(-15px);
+}
+
+/* Classe adicionada pelo IntersectionObserver para fade in e elevação */
+.card-contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
