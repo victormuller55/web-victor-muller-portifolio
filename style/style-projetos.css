@@ -1,0 +1,63 @@
+.div-projetos {
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+.title-projetos {
+    color: rgb(255, 174, 0);
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+
+.hr-projetos {
+    color: rgb(255, 255, 255);
+}
+
+.card-projeto {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; 
+    overflow: hidden;
+}
+
+/* Elevação no hover */
+.card-projeto:hover {
+    transform: translateY(-20px);
+    background: rgba(0, 0, 0, 0.4);
+    border: rgb(82, 82, 82) 2px solid;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-frosted-card-projetos {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-frosted-card-projetos:hover {
+    background: rgba(75, 75, 75, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.img-projetos {
+    height: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.title-card-projeto {
+    color: rgb(255, 174, 0);
+}
