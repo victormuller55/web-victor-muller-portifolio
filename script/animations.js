@@ -41,3 +41,19 @@ const observer = new IntersectionObserver((entries) => {
 if (linguagens.length > 0) {
   observer.observe(linguagens[0]);
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card-projeto");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target); // Evita animar de novo
+            }
+        });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+});
