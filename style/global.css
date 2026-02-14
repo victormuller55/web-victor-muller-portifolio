@@ -4,7 +4,7 @@ body {
     background-color: #202020;
 }
 
-/* Barra superior: efeito de vidro (frosted) igual aos botões da primeira section */
+/* Navbar - glass effect */
 .navbar.fixed-top {
     background: rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -18,20 +18,19 @@ body {
     border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
-.navbar-brand-icon {
-    margin-right: 8px;
-}
-
-.button-whats-app {
+.btn-whatsapp {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
     width: 60px;
     height: 60px;
-    border-radius: 360px;
+    border-radius: 50%;
     background-color: #25d366;
     border: none;
-    margin-left: 15px;
 }
 
-.floating-symbols {
+/* Hero section background */
+.hero-bg {
     background: linear-gradient(to bottom, #000000, #202020);
     position: relative;
     width: 100%;
@@ -39,8 +38,7 @@ body {
     z-index: 0;
 }
 
-/* Estrelas no fundo (pontos brancos) */
-.floating-symbols .stars {
+.hero-bg .hero-stars {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -48,14 +46,13 @@ body {
     overflow: hidden;
 }
 
-.floating-symbols .star {
+.hero-bg .hero-star {
     position: absolute;
     background: #fff;
     border-radius: 50%;
 }
 
-/* Estrela cadente: risquinho curvo discreto no fundo */
-.floating-symbols .shooting-star {
+.hero-bg .hero-shooting-star {
     position: absolute;
     width: 28px;
     height: 8px;
@@ -65,13 +62,13 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.floating-symbols .shooting-star svg {
+.hero-bg .hero-shooting-star svg {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.floating-symbols .shooting-star.shoot {
+.hero-bg .hero-shooting-star.shoot {
     animation: shooting-star-flicker 1s ease-out forwards;
 }
 
@@ -80,22 +77,16 @@ body {
         opacity: 0;
         transform: rotate(var(--shoot-rotate, 0deg)) translate(0, 0) scale(0.95);
     }
-    25% {
-        opacity: 0.6;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.25;
-    }
+    25% { opacity: 0.6; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.25; }
     100% {
         opacity: 0;
         transform: rotate(var(--shoot-rotate, 0deg)) translate(4px, -3px) scale(0.98);
     }
 }
 
-.floating-symbols span {
+.hero-bg .hero-symbol {
     position: absolute;
     color: #616161;
     font-size: 1rem;
@@ -105,21 +96,21 @@ body {
     z-index: 1;
 }
 
-.btn-frosted {
-  background: rgba(255, 255, 255, 0.1);
-  color: white; 
-  border: 1px solid rgba(255, 255, 255, 0.3); 
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  height: 40px;
-  width: 200px;
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    height: 40px;
+    width: 200px;
 }
 
-.btn-frosted:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 @keyframes moveRandom {
@@ -135,16 +126,8 @@ body {
 }
 
 @keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.7;
-    }
-    90% {
-        opacity: 0.7;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% { opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.7; }
+    100% { opacity: 0; }
 }

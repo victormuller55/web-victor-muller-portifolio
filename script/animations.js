@@ -1,6 +1,5 @@
 function initAnimations() {
-  // About
-  const about = document.querySelector(".about-container");
+  const about = document.querySelector(".section-about");
   if (about) {
     const aboutObserver = new IntersectionObserver(
       ([entry], observer) => {
@@ -14,54 +13,43 @@ function initAnimations() {
     aboutObserver.observe(about);
   }
 
-  const socialIcons = document.querySelectorAll(
-    ".about-container .social-div-about"
-  );
-
+  const socialIcons = document.querySelectorAll(".section-about .about-social-link");
   if (socialIcons.length > 0) {
     const iconsObserver = new IntersectionObserver(
       ([entry], observer) => {
         if (entry.isIntersecting) {
           socialIcons.forEach((icon, index) => {
-            setTimeout(() => {
-              icon.classList.add("animate"); // dispara a animação de cada ícone em sequência
-            }, index * 200); // 200ms entre cada ícone
+            setTimeout(() => icon.classList.add("animate"), index * 200);
           });
-          observer.disconnect(); // anima apenas uma vez
+          observer.disconnect();
         }
       },
       { threshold: 0.2 }
     );
-
-    iconsObserver.observe(socialIcons[0]); // observa o primeiro ícone apenas
+    iconsObserver.observe(socialIcons[0]);
   }
 
-  // Linguagens
-  const container = document.querySelector(".linguagens-container");
-
-  if (container) {
-    const linguagensObserver = new IntersectionObserver(
+  const skillsSection = document.querySelector(".skills-section");
+  if (skillsSection) {
+    const skillsObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const items = container.querySelectorAll(".lingagem-div");
+            const items = entry.target.querySelectorAll(".skill-card");
             items.forEach((item, index) => {
               setTimeout(() => item.classList.add("animate"), index * 150);
             });
-            observer.unobserve(container);
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.2 }
     );
-
-    linguagensObserver.observe(container);
+    skillsObserver.observe(skillsSection);
   }
 
-
-  // Cards de projeto
-  const cards = document.querySelectorAll(".card-projeto");
-  if (cards.length > 0) {
+  const projectCards = document.querySelectorAll(".project-card");
+  if (projectCards.length > 0) {
     const cardsObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -73,18 +61,17 @@ function initAnimations() {
       },
       { threshold: 0.2 }
     );
-    cards.forEach((card) => cardsObserver.observe(card));
+    projectCards.forEach((card) => cardsObserver.observe(card));
   }
 
-  // Timeline cards
   const timelineCards = document.querySelectorAll(".timeline-card");
   if (timelineCards.length > 0) {
     const timelineObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("show"); // adiciona classe de animação
-            observer.unobserve(entry.target); // anima uma vez
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -93,11 +80,10 @@ function initAnimations() {
     timelineCards.forEach((card) => timelineObserver.observe(card));
   }
 
-  const timelineTitle = document.querySelector(".title-timeline");
-  const timelineHR = document.querySelector(".hr-timeline");
-
+  const timelineTitle = document.querySelector(".timeline-title");
+  const timelineHR = document.querySelector(".timeline-hr");
   if (timelineTitle && timelineHR) {
-    const timelineObserver = new IntersectionObserver(
+    const timelineTitleObserver = new IntersectionObserver(
       ([entry], observer) => {
         if (entry.isIntersecting) {
           timelineTitle.classList.add("show");
@@ -107,14 +93,11 @@ function initAnimations() {
       },
       { threshold: 0.2 }
     );
-
-    // Observa apenas o título, mas anima HR também
-    timelineObserver.observe(timelineTitle);
+    timelineTitleObserver.observe(timelineTitle);
   }
 
-  const contactTitle = document.querySelector(".title-contact");
-  const contactHR = document.querySelector(".hr-contact");
-
+  const contactTitle = document.querySelector(".contact-title");
+  const contactHR = document.querySelector(".contact-hr");
   if (contactTitle && contactHR) {
     const contactObserver = new IntersectionObserver(
       ([entry], observer) => {
@@ -126,48 +109,35 @@ function initAnimations() {
       },
       { threshold: 0.2 }
     );
-
-    // Observa apenas o título, mas anima HR também
     contactObserver.observe(contactTitle);
   }
 
-  // Cards de contato
-  const contactCards = document.querySelectorAll(".card-contact");
+  const contactCards = document.querySelectorAll(".contact-card");
   if (contactCards.length > 0) {
-    const cardsObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Adiciona fade in em sequência
-            contactCards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add("show");
-              }, index * 200); // cada card aparece com 200ms de diferença
-            });
-            observer.disconnect(); // anima apenas uma vez
-          }
-        });
+    const contactCardsObserver = new IntersectionObserver(
+      ([entry], observer) => {
+        if (entry.isIntersecting) {
+          contactCards.forEach((card, index) => {
+            setTimeout(() => card.classList.add("show"), index * 200);
+          });
+          observer.disconnect();
+        }
       },
       { threshold: 0.2 }
     );
-
-    cardsObserver.observe(contactCards[0]); // observa o primeiro card apenas
+    contactCardsObserver.observe(contactCards[0]);
   }
 
-  // Navbar: transparente na primeira section, ganha cor com fade ao rolar
   const nav = document.getElementById("main-nav");
-  const firstSection = document.querySelector(".floating-symbols");
-
+  const heroBg = document.querySelector(".hero-bg");
   function updateNavbarScroll() {
-    if (!nav || !firstSection) return;
-    const firstHeight = firstSection.offsetHeight;
-    if (window.scrollY >= firstHeight - 1) {
+    if (!nav || !heroBg) return;
+    if (window.scrollY >= heroBg.offsetHeight - 1) {
       nav.classList.add("navbar-scrolled");
     } else {
       nav.classList.remove("navbar-scrolled");
     }
   }
-
   window.addEventListener("scroll", updateNavbarScroll, { passive: true });
   updateNavbarScroll();
 }

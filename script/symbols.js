@@ -1,30 +1,26 @@
-const section = document.querySelector(".floating-symbols");
-const symbols = document.querySelectorAll(".floating-symbols span");
+const heroBg = document.querySelector(".hero-bg");
+const symbols = document.querySelectorAll(".hero-bg .hero-symbol");
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-// Repulsão entre símbolos quando se aproximam
-const REPEL_RADIUS = 65; // distância abaixo da qual se repelem
-const REPEL_STRENGTH = 2.2; // força com que são jogados em direções opostas
-const OFFSET_DECAY = 0.028; // o offset da colisão vai sumindo aos poucos
+const REPEL_RADIUS = 65;
+const REPEL_STRENGTH = 2.2;
+const OFFSET_DECAY = 0.028;
 
 const symbolState = new Map();
 
 function createStars() {
   const container = document.getElementById("stars-container");
   if (!container) return;
-
   const count = 140;
   for (let i = 0; i < count; i++) {
     const star = document.createElement("div");
-    star.className = "star";
-    const size = Math.random() * 2.5 + 0.8; // pequenos e grandes (0.8px a 3.3px)
-    const opacity = Math.random() * 0.6 + 0.2; // fracos e fortes (0.2 a 0.8)
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
+    star.className = "hero-star";
+    star.style.width = `${Math.random() * 2.5 + 0.8}px`;
+    star.style.height = star.style.width;
     star.style.left = `${Math.random() * 100}%`;
     star.style.top = `${Math.random() * 100}%`;
-    star.style.opacity = opacity;
+    star.style.opacity = Math.random() * 0.6 + 0.2;
     container.appendChild(star);
   }
 }
@@ -38,22 +34,10 @@ function initializeSymbols() {
 
     symbol.style.setProperty("--x-start", `${randomX}px`);
     symbol.style.setProperty("--y-start", `${randomY}px`);
-    symbol.style.setProperty(
-      "--x-mid",
-      `${randomX + (Math.random() * 200 - 100)}px`
-    );
-    symbol.style.setProperty(
-      "--y-mid",
-      `${randomY + (Math.random() * 200 - 100)}px`
-    );
-    symbol.style.setProperty(
-      "--x-end",
-      `${randomX + (Math.random() * 400 - 200)}px`
-    );
-    symbol.style.setProperty(
-      "--y-end",
-      `${randomY + (Math.random() * 400 - 200)}px`
-    );
+    symbol.style.setProperty("--x-mid", `${randomX + (Math.random() * 200 - 100)}px`);
+    symbol.style.setProperty("--y-mid", `${randomY + (Math.random() * 200 - 100)}px`);
+    symbol.style.setProperty("--x-end", `${randomX + (Math.random() * 400 - 200)}px`);
+    symbol.style.setProperty("--y-end", `${randomY + (Math.random() * 400 - 200)}px`);
     symbol.style.setProperty("--mouse-dx", "0px");
     symbol.style.setProperty("--mouse-dy", "0px");
     symbol.style.fontSize = `${randomSize}rem`;
@@ -65,7 +49,7 @@ function initializeSymbols() {
 }
 
 function updateCollisions() {
-  if (!section) return;
+  if (!heroBg) return;
 
   const symbolArray = Array.from(symbols);
   const positions = symbolArray.map((s) => {
@@ -104,12 +88,10 @@ function updateCollisions() {
   symbolArray.forEach((symbol) => {
     const state = symbolState.get(symbol);
     if (!state) return;
-
     state.dx *= 1 - OFFSET_DECAY;
     state.dy *= 1 - OFFSET_DECAY;
     if (Math.abs(state.dx) < 0.1) state.dx = 0;
     if (Math.abs(state.dy) < 0.1) state.dy = 0;
-
     symbol.style.setProperty("--mouse-dx", `${state.dx}px`);
     symbol.style.setProperty("--mouse-dy", `${state.dy}px`);
   });
@@ -117,7 +99,6 @@ function updateCollisions() {
   requestAnimationFrame(updateCollisions);
 }
 
-// Estrela cadente: risquinho curvo discreto no fundo, a cada 10 segundos
 const SHOOTING_STAR_INTERVAL_MS = 10000;
 const shootingStarEl = document.getElementById("shooting-star");
 
@@ -132,9 +113,7 @@ function triggerShootingStar() {
 }
 
 if (shootingStarEl) {
-  shootingStarEl.addEventListener("animationend", () => {
-    shootingStarEl.classList.remove("shoot");
-  });
+  shootingStarEl.addEventListener("animationend", () => shootingStarEl.classList.remove("shoot"));
   setTimeout(triggerShootingStar, 2000);
   setInterval(triggerShootingStar, SHOOTING_STAR_INTERVAL_MS);
 }

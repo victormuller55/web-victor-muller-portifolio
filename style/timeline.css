@@ -1,0 +1,137 @@
+.timeline-section {
+    position: relative;
+    padding: 50px 0;
+    background: #202020;
+    min-height: 100vh;
+}
+
+.timeline-title {
+    opacity: 0;
+    color: rgb(255, 174, 0);
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.timeline-title.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-hr {
+    border: none;
+    height: 1px;
+    width: 0%;
+    background-color: rgb(85, 85, 85);
+    margin: 10px 0 30px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    margin-bottom: 100px;
+}
+
+.timeline-hr.show {
+    opacity: 1;
+    width: 100%;
+    transform: translateY(0);
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 85%;
+    background-color: rgb(255, 174, 0);
+}
+
+.timeline-card {
+    position: relative;
+    width: 40%;
+    background: #2a2a2a;
+    color: white;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.timeline-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-card.left {
+    left: calc(50% - 42%);
+}
+
+.timeline-card.right {
+    left: calc(50% + 2%);
+}
+
+.timeline-card .card-date {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 174, 0);
+    margin-bottom: 8px;
+}
+
+.timeline-card .card-title {
+    font-size: 20px;
+    color: rgb(255, 174, 0);
+    margin: 0 0 5px;
+}
+
+.timeline-card .card-location {
+    font-size: 14px;
+    font-style: italic;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+}
+
+.timeline-card .card-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.timeline-card .card-skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.timeline-card .card-skills li {
+    background: rgb(255, 174, 0);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .timeline-line {
+        display: none;
+    }
+    .timeline-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-card {
+        width: 90% !important;
+        left: auto !important;
+        transform: translateY(30px);
+        margin: 20px 0;
+    }
+    .timeline-card.left,
+    .timeline-card.right {
+        left: auto !important;
+    }
+}

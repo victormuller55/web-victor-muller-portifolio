@@ -1,0 +1,50 @@
+.nav-link.menu-link {
+    color: #FFAE00;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 0 #FFAE00;
+}
+
+.nav-link.menu-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #FFAE00, 0 0 12px #FFAE00, 0 0 16px #FFAE00;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav .nav-item {
+        margin: 15px 0;
+    }
+}
+
+/* Hero content (center text) */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-content p {
+    margin: 0;
+}
+
+.hero-title-fade-in {
+    opacity: 0;
+    animation: hero-title-fade-in 0.8s ease-out forwards;
+}
+
+@keyframes hero-title-fade-in {
+    to { opacity: 1; }
+}

@@ -4,49 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Victor Muller | Desenvolvedor Mobile</title>
-
     <link rel="icon" href="image/icon.png" type="image/png" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style/style-main.css" />
-    <link rel="stylesheet" href="style/style-about.css" />
-    <link rel="stylesheet" href="style/style-linguagens.css" />
-    <link rel="stylesheet" href="style/style-projetos.css" />
-    <link rel="stylesheet" href="style/style-timeline.css" />
-    <link rel="stylesheet" href="style/style-contact.css" />
-    <link rel="stylesheet" href="style/boostrap-alterado.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/about.css" />
+    <link rel="stylesheet" href="style/skills.css" />
+    <link rel="stylesheet" href="style/projects.css" />
+    <link rel="stylesheet" href="style/timeline.css" />
+    <link rel="stylesheet" href="style/contact.css" />
+    <link rel="stylesheet" href="style/bootstrap-overrides.css" />
   </head>
   <body>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
     <button
       type="button"
-      class="button-whats-app fixed-bottom fixed-right mb-3"
-      data-toggle="tooltip"
-      data-placement="right"
+      class="btn-whatsapp mb-3"
       title="Entre em contato via WhatsApp"
-      onclick="
-        window.location.href =
-          'https://api.whatsapp.com/send?phone=5541995919194'
-      "
+      onclick="window.location.href='https://api.whatsapp.com/send?phone=5541995919194'"
     >
       <img src="image/logo-whats-app.png" alt="WhatsApp" />
     </button>
 
-    <!-- Menu fixo no topo -->
+    <!-- ========== NAVBAR ========== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav">
       <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-          Victor Muller
-        </a>
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">Victor Muller</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -58,120 +45,72 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarResponsive"
-        >
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
           <ul class="navbar-nav">
-            <li class="nav-item mx-2">
-              <a class="nav-link menu-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link menu-link" href="#projetos">Projetos</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link menu-link" href="#experiencias"
-                >Experiências</a
-              >
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link menu-link" href="#fale-comigo">Fale Comigo</a>
-            </li>
+            <li class="nav-item mx-2"><a class="nav-link menu-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item mx-2"><a class="nav-link menu-link" href="#projetos">Projetos</a></li>
+            <li class="nav-item mx-2"><a class="nav-link menu-link" href="#experiencias">Experiências</a></li>
+            <li class="nav-item mx-2"><a class="nav-link menu-link" href="#fale-comigo">Fale Comigo</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Floating Symbols -->
-    <div class="floating-symbols">
-      <div class="stars" id="stars-container" aria-hidden="true"></div>
-      <div class="shooting-star" id="shooting-star" aria-hidden="true">
+    <!-- ========== HERO (FIRST SCREEN) ========== -->
+    <div class="hero-bg">
+      <div class="hero-stars" id="stars-container" aria-hidden="true"></div>
+      <div class="hero-shooting-star" id="shooting-star" aria-hidden="true">
         <svg viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            class="shooting-star-stroke"
-            d="M 0 4 Q 8 0 16 4 T 32 4"
-            stroke="currentColor"
-            stroke-width="1.2"
-            stroke-linecap="round"
-          />
+          <path class="shooting-star-stroke" d="M 0 4 Q 8 0 16 4 T 32 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="center-text">
-        <h1 id="texto-digitado" class="text-white mb-3 title-fade-in">
-          <b>Victor Muller</b>
-        </h1>
+      <div class="hero-content">
+        <h1 class="text-white mb-3 hero-title-fade-in"><b>Victor Muller</b></h1>
         <hr />
-        <p class="text-white ml-5 mr-5">
-          DESENVOLVEDOR MOBILE | ENGENHEIRO DE SOFTWARE
-        </p>
+        <p class="text-white ml-5 mr-5">DESENVOLVEDOR MOBILE | ENGENHEIRO DE SOFTWARE</p>
         <div>
-          <button
-            type="button"
-            onclick="window.location.href = '#fale-comigo'"
-            class="btn btn-frosted mt-3 mr-1"
-          >
-            Fale Comigo
-          </button>
-
-          <button
-            type="button"
-            onclick="
-              window.open('assets/curriculo-victor-muller-da-luz.pdf', '_blank')
-            "
-            class="btn btn-frosted mt-3 ml-1"
-          >
-            Ver Currículo
-          </button>
+          <button type="button" onclick="window.location.href='#fale-comigo'" class="btn btn-glass mt-3 mr-1">Fale Comigo</button>
+          <button type="button" onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf','_blank')" class="btn btn-glass mt-3 ml-1">Ver Currículo</button>
         </div>
         <p class="text-white ml-5 mr-5 mt-3 mb-3">Role para ver mais</p>
         <img width="30" src="image/icons/arrow_down.png" alt="" />
       </div>
-
-      <!-- Simbolos -->
-
-      <span>&lt;/&gt;</span>
-      <span>{ }</span>
-      <span>&lt;h1&gt;</span>
-      <span>()</span>
-      <span>=&gt;</span>
-      <span>var</span>
-      <span>if()</span>
-      <span>while()</span>
-      <span>return</span>
-      <span>&lt;div&gt;</span>
-      <span>console.log()</span>
-      <span>let</span>
-      <span>const</span>
-      <span>style.css</span>
-      <span>script.js</span>
-      <span>&lt;h1&gt;</span>
-      <span>()</span>
-      <span>=&gt;</span>
-      <span>while()</span>
-      <span>return</span>
-      <span>&lt;div&gt;</span>
-      <span>let</span>
-      <span>const</span>
+      <!-- Floating code symbols (animated) -->
+      <span class="hero-symbol">&lt;/&gt;</span>
+      <span class="hero-symbol">{ }</span>
+      <span class="hero-symbol">&lt;h1&gt;</span>
+      <span class="hero-symbol">()</span>
+      <span class="hero-symbol">=&gt;</span>
+      <span class="hero-symbol">var</span>
+      <span class="hero-symbol">if()</span>
+      <span class="hero-symbol">while()</span>
+      <span class="hero-symbol">return</span>
+      <span class="hero-symbol">&lt;div&gt;</span>
+      <span class="hero-symbol">console.log()</span>
+      <span class="hero-symbol">let</span>
+      <span class="hero-symbol">const</span>
+      <span class="hero-symbol">style.css</span>
+      <span class="hero-symbol">script.js</span>
+      <span class="hero-symbol">&lt;h1&gt;</span>
+      <span class="hero-symbol">()</span>
+      <span class="hero-symbol">=&gt;</span>
+      <span class="hero-symbol">while()</span>
+      <span class="hero-symbol">return</span>
+      <span class="hero-symbol">&lt;div&gt;</span>
+      <span class="hero-symbol">let</span>
+      <span class="hero-symbol">const</span>
     </div>
 
-    <!-- Sobre mim -->
-
+    <!-- ========== ABOUT ========== -->
     <div id="sobre"></div>
     <section>
-      <div class="about-container">
+      <div class="section-about">
         <div class="d-flex">
-          <img
-            id="minha-foto"
-            class="image-about"
-            height="460"
-            src="/image/me.png"
-            alt=""
-          />
+          <img class="about-photo" height="460" src="/image/me.png" alt="Victor Muller" />
           <div style="padding-top: 40px">
-            <h2 class="title-about">Sobre mim</h2>
-            <hr class="hr-about" style="color: white" />
-            <h5 class="text-about">
+            <h2 class="about-title">Sobre mim</h2>
+            <hr class="about-hr" style="color: white" />
+            <h5 class="about-text">
               Oi! Eu sou <strong class="text-white">Victor Muller</strong>,
               desenvolvedor de software com experiência em Flutter e Java,
               formado em Engenharia de Software. Adoro transformar ideias em
@@ -181,332 +120,161 @@
               inovar. Se você quer alguém que realmente se importa com cada
               detalhe do seu projeto, chegou ao lugar certo!
             </h5>
-            <div
-              class="row container mt-4 justify-content-start"
-              style="margin-left: 40px"
-            >
-              <a
-                href="https://github.com/victormuller55"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-div-about github"
-              >
-                <img
-                  src="image/icons/github.svg"
-                  alt="GitHub"
-                  width="30"
-                  height="30"
-                />
+            <div class="row container mt-4 justify-content-start" style="margin-left: 40px">
+              <a href="https://github.com/victormuller55" target="_blank" rel="noopener noreferrer" class="about-social-link github">
+                <img src="image/icons/github.svg" alt="GitHub" width="30" height="30" />
               </a>
-
-              <a
-                href="https://www.linkedin.com/in/victormuller55/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-div-about linkedin"
-              >
-                <img
-                  src="image/icons/linkedin.svg"
-                  alt="LinkedIn"
-                  width="30"
-                  height="30"
-                />
+              <a href="https://www.linkedin.com/in/victormuller55/" target="_blank" rel="noopener noreferrer" class="about-social-link linkedin">
+                <img src="image/icons/linkedin.svg" alt="LinkedIn" width="30" height="30" />
               </a>
-
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-div-about instagram"
-              >
-                <img
-                  src="image/icons/instagram.svg"
-                  alt="Instagram"
-                  width="30"
-                  height="30"
-                />
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="about-social-link instagram">
+                <img src="image/icons/instagram.svg" alt="Instagram" width="30" height="30" />
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="linguagens-container mt-4">
-        <a
-          href="https://docs.flutter.dev/"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
-            <img
-              src="image/icons/flutter.svg"
-              alt="Flutter"
-              width="60"
-              height="60"
-            />
+      <!-- ========== SKILLS (LANGUAGES / TECH) ========== -->
+      <div class="skills-section mt-4">
+        <a href="https://docs.flutter.dev/" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
+            <img src="image/icons/flutter.svg" alt="Flutter" width="60" height="60" />
             <p class="text-white mt-2">Flutter</p>
           </div>
         </a>
-
-        <a href="https://dart.dev/guides" target="_blank" class="lingagem-link">
-          <div class="lingagem-div pt-4">
+        <a href="https://dart.dev/guides" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
             <img src="image/icons/dart.svg" alt="Dart" width="60" height="60" />
             <p class="text-white mt-2">Dart</p>
           </div>
         </a>
-
-        <a
-          href="https://docs.oracle.com/en/java/"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
+        <a href="https://docs.oracle.com/en/java/" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
             <img src="image/icons/java.svg" alt="Java" width="60" height="60" />
             <p class="text-white mt-2">Java</p>
           </div>
         </a>
-
-        <a
-          href="https://docs.spring.io/spring-boot/docs/current/reference/html/"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
-            <img
-              src="image/icons/spring.svg"
-              alt="Spring Boot"
-              width="60"
-              height="60"
-            />
+        <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
+            <img src="image/icons/spring.svg" alt="Spring Boot" width="60" height="60" />
             <p class="text-white mt-2">Spring Boot</p>
           </div>
         </a>
-
-        <a
-          href="https://developer.mozilla.org/docs/Web/HTML"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
+        <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
             <img src="image/icons/html.svg" alt="HTML" width="60" height="60" />
             <p class="text-white mt-2">HTML</p>
           </div>
         </a>
-
-        <a
-          href="https://developer.mozilla.org/docs/Web/CSS"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
+        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
             <img src="image/icons/css.svg" alt="CSS" width="60" height="60" />
             <p class="text-white mt-2">CSS</p>
           </div>
         </a>
-
-        <a
-          href="https://developer.mozilla.org/docs/Web/JavaScript"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
-            <img
-              src="image/icons/js.svg"
-              alt="JavaScript"
-              width="60"
-              height="60"
-            />
+        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
+            <img src="image/icons/js.svg" alt="JavaScript" width="60" height="60" />
             <p class="text-white mt-2">JavaScript</p>
           </div>
         </a>
-
-        <a
-          href="https://www.php.net/docs.php"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
+        <a href="https://www.php.net/docs.php" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
             <img src="image/icons/php.svg" alt="PHP" width="60" height="60" />
             <p class="text-white mt-2">PHP</p>
           </div>
         </a>
-
-        <a
-          href="https://angular.dev/overview"
-          target="_blank"
-          class="lingagem-link"
-        >
-          <div class="lingagem-div pt-4">
-            <img
-              src="image/icons/angular.svg"
-              alt="Angular"
-              width="60"
-              height="60"
-            />
+        <a href="https://angular.dev/overview" target="_blank" class="skill-link">
+          <div class="skill-card pt-4">
+            <img src="image/icons/angular.svg" alt="Angular" width="60" height="60" />
             <p class="text-white mt-2">Angular</p>
           </div>
         </a>
       </div>
     </section>
 
+    <!-- ========== PROJECTS ========== -->
     <div id="projetos" style="height: 50px"></div>
     <section>
-      <div class="div-projetos">
+      <div class="projects-section">
         <div class="container">
-          <h1 class="title-projetos"><b>Meus Projetos</b></h1>
-          <hr class="hr-projetos" />
+          <h1 class="projects-title"><b>Meus Projetos</b></h1>
+          <hr class="projects-hr" />
         </div>
         <div class="container-fluid">
           <div class="row justify-content-center">
-            <div class="card-projeto">
+            <div class="project-card">
               <div class="d-flex">
-                <img
-                  class="img-projetos"
-                  src="image/projects/scissor.png"
-                  alt=""
-                />
+                <img class="project-card-img" src="image/projects/scissor.png" alt="Scissor" />
                 <div style="padding-top: 40px; margin-left: 20px">
-                  <h3 class="title-card-projeto"><b>Scissor</b></h3>
+                  <h3 class="project-card-title"><b>Scissor</b></h3>
                   <hr style="color: white" />
-                  <p class="text-projetos">
+                  <p class="project-card-desc">
                     O Scissor é um aplicativo de gerenciamento de barbearias,
                     onde o cliente pode agendar horários, ver os serviços
                     disponíveis e até mesmo pagar pelo Pix.
                   </p>
-                  <button
-                    type="button"
-                    onclick="
-                      window.open(
-                        'https://www.figma.com/design/xhLqdBo5oRX1ajwi308W8T/PROT%C3%93TIPO---Scissor?node-id=0-1&t=gBDCFinP8nUgDSUm-1',
-                        '_blank',
-                      )
-                    "
-                    class="btn btn-frosted-card-projetos mt-3 ml-1"
-                  >
+                  <button type="button" onclick="window.open('https://www.figma.com/design/xhLqdBo5oRX1ajwi308W8T/PROT%C3%93TIPO---Scissor?node-id=0-1&t=gBDCFinP8nUgDSUm-1','_blank')" class="btn btn-project mt-3 ml-1">
                     Ver no Figma
-                    <img
-                      src="image/icons/arrow-right.svg"
-                      alt="GitHub"
-                      width="25"
-                      height="25"
-                      style="margin-left: 10px"
-                    />
+                    <img src="image/icons/arrow-right.svg" alt="" width="25" height="25" style="margin-left: 10px" />
                   </button>
                 </div>
               </div>
             </div>
-            <div class="card-projeto">
+            <div class="project-card">
               <div class="d-flex">
-                <img
-                  class="img-projetos"
-                  src="image/projects/tripway.png"
-                  alt=""
-                />
+                <img class="project-card-img" src="image/projects/tripway.png" alt="Tripway" />
                 <div style="padding-top: 40px; margin-left: 20px">
-                  <h3 class="title-card-projeto"><b>Tripway</b></h3>
+                  <h3 class="project-card-title"><b>Tripway</b></h3>
                   <hr style="color: white" />
-                  <p class="text-projetos">
+                  <p class="project-card-desc">
                     O Tripway é um aplicativo onde os usuarios podem buscar por
                     viagens, pacotes, ver detalhes, favoritar e comprar
                     passagens, alem de ver suas viagens compradas.
                   </p>
-                  <button
-                    type="button"
-                    onclick="
-                      window.open(
-                        'https://www.figma.com/design/gAWTbsFDBBFoEqOUkne4Lx/TRIPWAY?node-id=0-1&t=NUaHhIB2RVQeM9w2-1',
-                        '_blank',
-                      )
-                    "
-                    class="btn btn-frosted-card-projetos mt-3 ml-1"
-                  >
+                  <button type="button" onclick="window.open('https://www.figma.com/design/gAWTbsFDBBFoEqOUkne4Lx/TRIPWAY?node-id=0-1&t=NUaHhIB2RVQeM9w2-1','_blank')" class="btn btn-project mt-3 ml-1">
                     Ver no Figma
-                    <img
-                      src="image/icons/arrow-right.svg"
-                      alt="GitHub"
-                      width="25"
-                      height="25"
-                      style="margin-left: 10px"
-                    />
+                    <img src="image/icons/arrow-right.svg" alt="" width="25" height="25" style="margin-left: 10px" />
                   </button>
                 </div>
               </div>
             </div>
-            <div class="card-projeto">
+            <div class="project-card">
               <div class="d-flex">
-                <img
-                  class="img-projetos"
-                  src="image/projects/cashboost.png"
-                  alt=""
-                />
+                <img class="project-card-img" src="image/projects/cashboost.png" alt="Cashboost" />
                 <div style="padding-top: 40px; margin-left: 20px">
-                  <h3 class="title-card-projeto"><b>Cashboost</b></h3>
+                  <h3 class="project-card-title"><b>Cashboost</b></h3>
                   <hr style="color: white" />
-                  <p class="text-projetos">
+                  <p class="project-card-desc">
                     O Cashboost é um aplicativo feito juntamente com uma equipe
                     de faculdade, onde o usuario seriam vendedores de ponteiras
                     altomotivas, eles cadastrariam as notas fiscais de venda, e
-                    o aplicativo daria cashback baseado no valor do produto
-                    vendido.
+                    o aplicativo daria cashback baseado no valor do produto vendido.
                   </p>
-                  <button
-                    type="button"
-                    onclick="
-                      window.open(
-                        'https://www.figma.com/design/xSnbwsAGqneROnbKnTHbhH/Cashback---SOAMER?node-id=0-1&t=LG1wkEeNBiBNhcdl-1',
-                        '_blank',
-                      )
-                    "
-                    class="btn btn-frosted-card-projetos mt-3 ml-1"
-                  >
+                  <button type="button" onclick="window.open('https://www.figma.com/design/xSnbwsAGqneROnbKnTHbhH/Cashback---SOAMER?node-id=0-1&t=LG1wkEeNBiBNhcdl-1','_blank')" class="btn btn-project mt-3 ml-1">
                     Ver no Figma
-                    <img
-                      src="image/icons/arrow-right.svg"
-                      alt="GitHub"
-                      width="25"
-                      height="25"
-                      style="margin-left: 10px"
-                    />
+                    <img src="image/icons/arrow-right.svg" alt="" width="25" height="25" style="margin-left: 10px" />
                   </button>
                 </div>
               </div>
             </div>
-
-            <div class="card-projeto">
+            <div class="project-card">
               <div class="d-flex">
-                <img
-                  class="img-projetos"
-                  src="image/projects/foodmatch.png"
-                  alt=""
-                />
+                <img class="project-card-img" src="image/projects/foodmatch.png" alt="Foodmatch" />
                 <div style="padding-top: 40px; margin-left: 20px">
-                  <h3 class="title-card-projeto"><b>Foodmatch</b></h3>
+                  <h3 class="project-card-title"><b>Foodmatch</b></h3>
                   <hr style="color: white" />
-                  <p class="text-projetos">
+                  <p class="project-card-desc">
                     O Foodmatch é um aplicativo feito juntamente com uma equipe
                     de faculdade, onde os usuarios seriam tanto pessoas que
                     necessitam de comida, quanto pessoas que querem doar, o
                     aplicativo faria a conexão entre essas pessoas, e o usuario
                     poderia ver as doações disponíveis e solicitar uma doação.
                   </p>
-                  <button
-                    type="button"
-                    onclick="
-                      window.open(
-                        'assets/curriculo-victor-muller-da-luz.pdf',
-                        '_blank',
-                      )
-                    "
-                    class="btn btn-frosted-card-projetos mt-3 ml-1"
-                  >
+                  <button type="button" onclick="window.open('assets/curriculo-victor-muller-da-luz.pdf','_blank')" class="btn btn-project mt-3 ml-1">
                     Ver no Figma
-                    <img
-                      src="image/icons/arrow-right.svg"
-                      alt="GitHub"
-                      width="25"
-                      height="25"
-                      style="margin-left: 10px"
-                    />
+                    <img src="image/icons/arrow-right.svg" alt="" width="25" height="25" style="margin-left: 10px" />
                   </button>
                 </div>
               </div>
@@ -516,11 +284,12 @@
       </div>
     </section>
 
+    <!-- ========== TIMELINE / EXPERIENCE ========== -->
     <div id="experiencias" style="height: 50px"></div>
     <section class="timeline-section" id="experiencias">
       <div class="container">
-        <h1 class="title-timeline"><b>Minha Linha do tempo</b></h1>
-        <hr class="hr-timeline" />
+        <h1 class="timeline-title"><b>Minha Linha do tempo</b></h1>
+        <hr class="timeline-hr" />
       </div>
       <div class="timeline-line"></div>
       <div class="timeline-card left">
@@ -533,10 +302,7 @@
           algoritmos, despertando meu interesse por desenvolvimento de software.
         </p>
         <ul class="card-skills mt-4">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Java</li>
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Java</li>
         </ul>
       </div>
       <div class="timeline-card right">
@@ -551,12 +317,7 @@
           técnica para manter os sistemas organizados e funcionando bem.
         </p>
         <ul class="card-skills mt-4">
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>PostgreSQL</li>
-          <li>Java</li>
-          <li>Git</li>
-          <li>Figma</li>
+          <li>Flutter</li><li>Dart</li><li>PostgreSQL</li><li>Java</li><li>Git</li><li>Figma</li>
         </ul>
       </div>
       <div class="timeline-card left">
@@ -571,17 +332,12 @@
           aprendidos em sala de aula.
         </p>
         <ul class="card-skills mt-4">
-          <li>Metodologias ágeis</li>
-          <li>Estrutura de software</li>
-          <li>SQL</li>
-          <li>Projetos para empresas</li>
+          <li>Metodologias ágeis</li><li>Estrutura de software</li><li>SQL</li><li>Projetos para empresas</li>
         </ul>
       </div>
       <div class="timeline-card right">
         <div class="card-date">Jun 2024</div>
-        <h3 class="card-title">
-          Premio de 3° Lugar na Categoria Pequena Empresa
-        </h3>
+        <h3 class="card-title">Premio de 3° Lugar na Categoria Pequena Empresa</h3>
         <div class="card-location">UniSenai - Jornada de Aprendizagem</div>
         <p class="card-description">
           Recebi o 3° lugar na categoria Pequena Empresa através de uma
@@ -590,12 +346,7 @@
           da turma e decidiu implementar a solução desenvolvida.
         </p>
         <ul class="card-skills mt-4">
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>PostgreSQL</li>
-          <li>Java</li>
-          <li>Git</li>
-          <li>Figma</li>
+          <li>Flutter</li><li>Dart</li><li>PostgreSQL</li><li>Java</li><li>Git</li><li>Figma</li>
         </ul>
       </div>
       <div class="timeline-card left">
@@ -610,12 +361,7 @@
           qualidade e boas práticas.
         </p>
         <ul class="card-skills mt-4">
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>Spring Boot</li>
-          <li>Redis</li>
-          <li>Kafka</li>
-          <li>Git</li>
+          <li>Flutter</li><li>Dart</li><li>Spring Boot</li><li>Redis</li><li>Kafka</li><li>Git</li>
         </ul>
       </div>
       <div class="timeline-card right">
@@ -624,7 +370,7 @@
         <div class="card-location">ADM Software e Gestão</div>
         <p class="card-description">
           Atuei no desenvolvimento de aplicativos mobile voltados para ERP e
-          controle de boletins ferroviários, utilizando Flutter.Fui responsável
+          controle de boletins ferroviários, utilizando Flutter. Fui responsável
           pela estruturação e organização dos projetos, definição e uso de
           packages, além da integração de autenticação e do envio de
           notificações via Firebase. Também atuei no gerenciamento de logs e na
@@ -632,13 +378,7 @@
           qualidade, escalabilidade e facilidade de manutenção das aplicações.
         </p>
         <ul class="card-skills mt-4">
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>Android</li>
-          <li>Kotlin</li>
-          <li>Git</li>
-          <li>Figma</li>
-          <li>Firebase</li>
+          <li>Flutter</li><li>Dart</li><li>Android</li><li>Kotlin</li><li>Git</li><li>Figma</li><li>Firebase</li>
         </ul>
       </div>
       <div class="timeline-card left">
@@ -655,90 +395,45 @@
           desempenho e aderência às regras de negócio.
         </p>
         <ul class="card-skills mt-4">
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>.NET</li>
-          <li>C#</li>
-          <li>Area Financeira</li>
-          <li>Figma</li>
+          <li>Flutter</li><li>Dart</li><li>.NET</li><li>C#</li><li>Area Financeira</li><li>Figma</li>
         </ul>
       </div>
     </section>
-    <section id="fale-comigo" class="contact-container">
-      <div class="contact-header">
-        <h1 class="title-contact"><b>Fale Comigo</b></h1>
-        <hr class="hr-contact" />
-      </div>
 
-      <div class="row-contact">
+    <!-- ========== CONTACT ========== -->
+    <section id="fale-comigo" class="section-contact">
+      <div class="contact-header">
+        <h1 class="contact-title"><b>Fale Comigo</b></h1>
+        <hr class="contact-hr" />
+      </div>
+      <div class="contact-cards">
         <a href="mailto:victormuller050@gmail.com" class="contact-link">
-          <div class="card-contact email">
-            <img
-              class="mb-2"
-              height="50"
-              src="image/contact-icons/email.png"
-              alt="E-mail"
-            />
+          <div class="contact-card email">
+            <img class="mb-2" height="50" src="image/contact-icons/email.png" alt="E-mail" />
             E-mail
           </div>
         </a>
-
-        <a
-          href="https://github.com/victormuller55"
-          target="_blank"
-          class="contact-link"
-        >
-          <div class="card-contact github">
-            <img
-              class="mb-2"
-              height="50"
-              src="image/contact-icons/github.png"
-              alt="GitHub"
-            />
+        <a href="https://github.com/victormuller55" target="_blank" class="contact-link">
+          <div class="contact-card github">
+            <img class="mb-2" height="50" src="image/contact-icons/github.png" alt="GitHub" />
             GitHub
           </div>
         </a>
-
-        <a
-          href="https://www.linkedin.com/in/victormuller55/"
-          target="_blank"
-          class="contact-link"
-        >
-          <div class="card-contact linkedin">
-            <img
-              class="mb-2"
-              height="50"
-              src="image/contact-icons/linkedin.png"
-              alt="LinkedIn"
-            />
+        <a href="https://www.linkedin.com/in/victormuller55/" target="_blank" class="contact-link">
+          <div class="contact-card linkedin">
+            <img class="mb-2" height="50" src="image/contact-icons/linkedin.png" alt="LinkedIn" />
             LinkedIn
           </div>
         </a>
-
         <a href="tel:+5541995919194" class="contact-link">
-          <div class="card-contact phone">
-            <img
-              class="mb-2"
-              height="50"
-              src="image/contact-icons/phone.png"
-              alt="Telefone"
-            />
+          <div class="contact-card phone">
+            <img class="mb-2" height="50" src="image/contact-icons/phone.png" alt="Telefone" />
             Telefone
           </div>
         </a>
-
-        <a
-          href="https://wa.me/5541999727875"
-          target="_blank"
-          class="contact-link"
-        >
-          <div class="card-contact whatsapp">
-            <img
-              class="mb-2"
-              height="50"
-              src="image/contact-icons/whats-app.png"
-              alt="WhatsApp"
-            />
+        <a href="https://wa.me/5541999727875" target="_blank" class="contact-link">
+          <div class="contact-card whatsapp">
+            <img class="mb-2" height="50" src="image/contact-icons/whats-app.png" alt="WhatsApp" />
             WhatsApp
           </div>
         </a>

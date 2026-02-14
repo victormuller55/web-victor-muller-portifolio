@@ -1,8 +1,5 @@
-
-/* Componentes */
-
-.about-container {
-    border: solid 1px rgba(255, 255, 255, 0.1);
+.section-about {
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin: 200px;
     margin-bottom: 50px;
@@ -14,12 +11,12 @@
     transform: translateY(30px);
 }
 
-.image-about {
+.about-photo {
     border-radius: 5px;
     opacity: 0;
 }
 
-.hr-about {
+.about-hr {
     margin-right: 50px;
     margin-left: 50px;
     transform-origin: left;
@@ -27,7 +24,7 @@
     transform: scaleX(0);
 }
 
-.title-about {
+.about-title {
     margin-right: 50px;
     margin-left: 50px;
     color: rgb(255, 174, 0);
@@ -36,7 +33,7 @@
     font-weight: bold;
 }
 
-.text-about {
+.about-text {
     margin-right: 50px;
     margin-left: 50px;
     color: rgb(141, 141, 141);
@@ -45,37 +42,33 @@
     transform: translateY(30px);
 }
 
-/* Animações dos componentes */
-
-.about-container.animate {
+.section-about.animate {
     animation: borderDraw 0.5s ease forwards;
 }
 
-.about-container.animate .image-about {
+.section-about.animate .about-photo {
     animation: imageDrop 1s ease forwards;
-    animation-delay: 0.5s; /* após borda */
+    animation-delay: 0.5s;
 }
 
-.about-container.animate .hr-about {
+.section-about.animate .about-hr {
     animation: hrDraw 0.5s ease forwards;
-    animation-delay: 1s; /* após imagem */
+    animation-delay: 1s;
 }
 
-.about-container.animate .title-about {
+.section-about.animate .about-title {
     animation: textUp 0.8s ease forwards;
-    animation-delay: 1.5s; /* após hr */
+    animation-delay: 1.5s;
 }
 
-.about-container.animate .text-about {
+.section-about.animate .about-text {
     animation: textUp 0.8s ease forwards;
-    animation-delay: 1.7s; /* após hr */
+    animation-delay: 1.7s;
 }
 
-/* Icones */
-
-.social-div-about {
+.about-social-link {
     text-align: center;
-    border: rgb(136, 136, 136) 1px solid;
+    border: 1px solid rgb(136, 136, 136);
     width: 80px;
     height: 60px;
     padding-top: 15px;
@@ -89,68 +82,52 @@
     cursor: pointer;
 }
 
-/* Hover dos icones */
-.social-div-about:hover {
+.about-social-link:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.social-div-about.github:hover {
+.about-social-link.github:hover {
     background: linear-gradient(45deg, #333, #555);
     transform: translateY(-10px);
 }
 
-.social-div-about.linkedin:hover {
+.about-social-link.linkedin:hover {
     background: linear-gradient(45deg, #015685, #00b2f3);
 }
 
-.social-div-about.instagram:hover {
+.about-social-link.instagram:hover {
     background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
 
-/* Animações */
-.about-container.animate .social-div-about {
+.section-about.animate .about-social-link {
     animation: iconUp 0.5s ease forwards;
 }
 
-.about-container.animate .social-div-about.github {
-    animation-delay: 2.2s;
-}
-.about-container.animate .social-div-about.linkedin {
-    animation-delay: 2.4s;
-}
-.about-container.animate .social-div-about.instagram {
-    animation-delay: 2.6s;
-}
-
-
-/* Ajustes de tamanho de tela */
+.section-about.animate .about-social-link.github { animation-delay: 2.2s; }
+.section-about.animate .about-social-link.linkedin { animation-delay: 2.4s; }
+.section-about.animate .about-social-link.instagram { animation-delay: 2.6s; }
 
 @media (max-width: 1300px) {
-    .about-container {
+    .section-about {
         margin: 50px 20px;
         padding: 20px;
     }
-
-    .about-container .d-flex {
+    .section-about .d-flex {
         flex-direction: column;
         align-items: center;
     }
-
-    .image-about {
+    .about-photo {
         display: none;
     }
-
-    .title-about,
-    .text-about,
-    .hr-about {
+    .about-title,
+    .about-text,
+    .about-hr {
         text-align: center;
         margin-left: 0;
         margin-right: 0;
     }
 }
-
-/* Animações */
 
 @keyframes iconUp {
     0% { opacity: 0; transform: translateY(30px); }
