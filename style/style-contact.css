@@ -3,6 +3,7 @@
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
+    height: 70vh;
 }
 
 .contact-header {
@@ -47,13 +48,14 @@
     }
 }
 
-/* Centraliza os cards e adiciona espaçamento entre eles */
+/* Centraliza os cards no centro da section e adiciona espaçamento entre eles */
 .row-contact {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os cards */
-    align-items: center; /* Centraliza verticalmente os cards */
+    gap: 20px;
+    flex: 1; /* Ocupa o espaço restante da section */
     margin-top: 30px;
     margin-bottom: 30px;
 }

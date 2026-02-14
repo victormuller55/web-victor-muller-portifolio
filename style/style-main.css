@@ -4,6 +4,24 @@ body {
     background-color: #202020;
 }
 
+/* Barra superior: efeito de vidro (frosted) igual aos botões da primeira section */
+.navbar.fixed-top {
+    background: rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.4s ease, border-color 0.3s ease, backdrop-filter 0.4s ease;
+}
+
+.navbar.fixed-top.navbar-scrolled {
+    background: #111111;
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand-icon {
+    margin-right: 8px;
+}
+
 .button-whats-app {
     width: 60px;
     height: 60px;
@@ -21,6 +39,62 @@ body {
     z-index: 0;
 }
 
+/* Estrelas no fundo (pontos brancos) */
+.floating-symbols .stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-symbols .star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Estrela cadente: risquinho curvo discreto no fundo */
+.floating-symbols .shooting-star {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.floating-symbols .shooting-star svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.floating-symbols .shooting-star.shoot {
+    animation: shooting-star-flicker 1s ease-out forwards;
+}
+
+@keyframes shooting-star-flicker {
+    0% {
+        opacity: 0;
+        transform: rotate(var(--shoot-rotate, 0deg)) translate(0, 0) scale(0.95);
+    }
+    25% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(var(--shoot-rotate, 0deg)) translate(4px, -3px) scale(0.98);
+    }
+}
+
 .floating-symbols span {
     position: absolute;
     color: #616161;
@@ -28,6 +102,7 @@ body {
     white-space: nowrap;
     animation: moveRandom linear infinite, fadeInOut linear infinite;
     pointer-events: none;
+    z-index: 1;
 }
 
 .btn-frosted {
@@ -49,13 +124,13 @@ body {
 
 @keyframes moveRandom {
     0% {
-        transform: translate(var(--x-start), var(--y-start)) rotate(0deg);
+        transform: translate(calc(var(--x-start) + var(--mouse-dx, 0px)), calc(var(--y-start) + var(--mouse-dy, 0px))) rotate(0deg);
     }
     50% {
-        transform: translate(var(--x-mid), var(--y-mid)) rotate(180deg);
-     }
+        transform: translate(calc(var(--x-mid) + var(--mouse-dx, 0px)), calc(var(--y-mid) + var(--mouse-dy, 0px))) rotate(180deg);
+    }
     100% {
-        transform: translate(var(--x-end), var(--y-end)) rotate(360deg);
+        transform: translate(calc(var(--x-end) + var(--mouse-dx, 0px)), calc(var(--y-end) + var(--mouse-dy, 0px))) rotate(360deg);
     }
 }
 

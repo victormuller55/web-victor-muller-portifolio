@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initAnimations() {
   // About
   const about = document.querySelector(".about-container");
   if (about) {
@@ -153,4 +153,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cardsObserver.observe(contactCards[0]); // observa o primeiro card apenas
   }
-});
+
+  // Navbar: transparente na primeira section, ganha cor com fade ao rolar
+  const nav = document.getElementById("main-nav");
+  const firstSection = document.querySelector(".floating-symbols");
+
+  function updateNavbarScroll() {
+    if (!nav || !firstSection) return;
+    const firstHeight = firstSection.offsetHeight;
+    if (window.scrollY >= firstHeight - 1) {
+      nav.classList.add("navbar-scrolled");
+    } else {
+      nav.classList.remove("navbar-scrolled");
+    }
+  }
+
+  window.addEventListener("scroll", updateNavbarScroll, { passive: true });
+  updateNavbarScroll();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initAnimations);
+} else {
+  initAnimations();
+}
