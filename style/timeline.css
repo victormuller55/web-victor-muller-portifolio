@@ -17,6 +17,11 @@
     transform: translateY(0);
 }
 
+.timeline-title.exit {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
 .timeline-hr {
     border: none;
     height: 1px;
@@ -33,6 +38,12 @@
     opacity: 1;
     width: 100%;
     transform: translateY(0);
+}
+
+.timeline-hr.exit {
+    opacity: 0;
+    width: 0%;
+    transform: translateY(20px);
 }
 
 .timeline-line {
@@ -61,6 +72,11 @@
 .timeline-card.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.timeline-card.exit {
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .timeline-card.left {

@@ -2,10 +2,13 @@ function initAnimations() {
   const about = document.querySelector(".section-about");
   if (about) {
     const aboutObserver = new IntersectionObserver(
-      ([entry], observer) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
           about.classList.add("animate");
-          observer.disconnect();
+          about.classList.remove("exit");
+        } else {
+          about.classList.remove("animate");
+          about.classList.add("exit");
         }
       },
       { threshold: 0.25, rootMargin: "0px 0px -10% 0px" }
@@ -16,12 +19,17 @@ function initAnimations() {
   const socialIcons = document.querySelectorAll(".section-about .about-social-link");
   if (socialIcons.length > 0) {
     const iconsObserver = new IntersectionObserver(
-      ([entry], observer) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
+          socialIcons.forEach((icon) => icon.classList.remove("exit"));
           socialIcons.forEach((icon, index) => {
             setTimeout(() => icon.classList.add("animate"), index * 200);
           });
-          observer.disconnect();
+        } else {
+          socialIcons.forEach((icon) => {
+            icon.classList.remove("animate");
+            icon.classList.add("exit");
+          });
         }
       },
       { threshold: 0.2 }
@@ -32,14 +40,21 @@ function initAnimations() {
   const skillsSection = document.querySelector(".skills-section");
   if (skillsSection) {
     const skillsObserver = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
+          const items = entry.target.querySelectorAll(".skill-card");
           if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll(".skill-card");
             items.forEach((item, index) => {
-              setTimeout(() => item.classList.add("animate"), index * 150);
+              setTimeout(() => {
+                item.classList.add("animate");
+                item.classList.remove("exit");
+              }, index * 150);
             });
-            observer.unobserve(entry.target);
+          } else {
+            items.forEach((item) => {
+              item.classList.remove("animate");
+              item.classList.add("exit");
+            });
           }
         });
       },
@@ -51,11 +66,14 @@ function initAnimations() {
   const projectCards = document.querySelectorAll(".project-card");
   if (projectCards.length > 0) {
     const cardsObserver = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate");
-            observer.unobserve(entry.target);
+            entry.target.classList.remove("exit");
+          } else {
+            entry.target.classList.remove("animate");
+            entry.target.classList.add("exit");
           }
         });
       },
@@ -67,11 +85,14 @@ function initAnimations() {
   const timelineCards = document.querySelectorAll(".timeline-card");
   if (timelineCards.length > 0) {
     const timelineObserver = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
-            observer.unobserve(entry.target);
+            entry.target.classList.remove("exit");
+          } else {
+            entry.target.classList.remove("show");
+            entry.target.classList.add("exit");
           }
         });
       },
@@ -84,11 +105,17 @@ function initAnimations() {
   const timelineHR = document.querySelector(".timeline-hr");
   if (timelineTitle && timelineHR) {
     const timelineTitleObserver = new IntersectionObserver(
-      ([entry], observer) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
           timelineTitle.classList.add("show");
+          timelineTitle.classList.remove("exit");
           timelineHR.classList.add("show");
-          observer.unobserve(entry.target);
+          timelineHR.classList.remove("exit");
+        } else {
+          timelineTitle.classList.remove("show");
+          timelineTitle.classList.add("exit");
+          timelineHR.classList.remove("show");
+          timelineHR.classList.add("exit");
         }
       },
       { threshold: 0.2 }
@@ -100,11 +127,17 @@ function initAnimations() {
   const contactHR = document.querySelector(".contact-hr");
   if (contactTitle && contactHR) {
     const contactObserver = new IntersectionObserver(
-      ([entry], observer) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
           contactTitle.classList.add("show");
+          contactTitle.classList.remove("exit");
           contactHR.classList.add("show");
-          observer.unobserve(entry.target);
+          contactHR.classList.remove("exit");
+        } else {
+          contactTitle.classList.remove("show");
+          contactTitle.classList.add("exit");
+          contactHR.classList.remove("show");
+          contactHR.classList.add("exit");
         }
       },
       { threshold: 0.2 }
@@ -115,12 +148,19 @@ function initAnimations() {
   const contactCards = document.querySelectorAll(".contact-card");
   if (contactCards.length > 0) {
     const contactCardsObserver = new IntersectionObserver(
-      ([entry], observer) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
           contactCards.forEach((card, index) => {
-            setTimeout(() => card.classList.add("show"), index * 200);
+            setTimeout(() => {
+              card.classList.add("show");
+              card.classList.remove("exit");
+            }, index * 200);
           });
-          observer.disconnect();
+        } else {
+          contactCards.forEach((card) => {
+            card.classList.remove("show");
+            card.classList.add("exit");
+          });
         }
       },
       { threshold: 0.2 }

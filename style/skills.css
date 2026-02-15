@@ -40,6 +40,10 @@
     transform: rotateX(0deg);
 }
 
+.skill-card.exit {
+    transform: rotateX(90deg);
+}
+
 .skill-card:hover {
     text-decoration: none;
     transform: translateY(-15px) rotateX(0deg);

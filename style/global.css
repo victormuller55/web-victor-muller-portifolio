@@ -18,15 +18,79 @@ body {
     border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
-.btn-whatsapp {
+/* WhatsApp floating button - expande à esquerda no hover, fundo verde, sempre visível */
+.btn-whatsapp-wrap {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+    z-index: 2147483647;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: width 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+    width: 60px;
+    background-color: #25d366;
+    height: 60px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp-wrap:hover {
+    width: 230px;
+    background-color: #25d366;
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.6), 0 0 45px rgba(37, 211, 102, 0.35);
+    filter: brightness(1.08);
+}
+
+.btn-whatsapp-label {
+    white-space: nowrap;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #fff;
+    padding-left: 18px;
+    padding-right: 8px;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease 0.05s, max-width 0.35s ease;
+}
+
+.btn-whatsapp-wrap:hover .btn-whatsapp-label {
+    opacity: 1;
+    max-width: 180px;
+}
+
+.btn-whatsapp {
+    flex-shrink: 0;
     width: 60px;
     height: 60px;
+    margin: 0;
+    padding: 0;
     border-radius: 50%;
-    background-color: #25d366;
+    background-color: rgba(0, 0, 0, 0.12);
     border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.35s ease, background-color 0.25s ease;
+}
+
+.btn-whatsapp-wrap:hover .btn-whatsapp {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn-whatsapp img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 /* Hero section background */

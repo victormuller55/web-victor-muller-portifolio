@@ -20,16 +20,6 @@
   </head>
   <body>
 
-    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
-    <button
-      type="button"
-      class="btn-whatsapp mb-3"
-      title="Entre em contato via WhatsApp"
-      onclick="window.location.href='https://api.whatsapp.com/send?phone=5541995919194'"
-    >
-      <img src="image/logo-whats-app.png" alt="WhatsApp" />
-    </button>
-
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav">
       <div class="container">
@@ -65,8 +55,8 @@
         </svg>
       </div>
       <div class="hero-content">
-        <h1 class="text-white mb-3 hero-title-fade-in"><b>Victor Muller</b></h1>
-        <hr />
+        <p style="font-size: 60px;" class="text-white mb-3"><b>Victor Muller da Luz</b></h3>
+        <hr/>
         <p class="text-white ml-5 mr-5">DESENVOLVEDOR MOBILE | ENGENHEIRO DE SOFTWARE</p>
         <div>
           <button type="button" onclick="window.location.href='#fale-comigo'" class="btn btn-glass mt-3 mr-1">Fale Comigo</button>
@@ -439,6 +429,20 @@
         </a>
       </div>
     </section>
+
+    <!-- ========== FLOATING WHATSAPP (sempre visível, fixo) ========== -->
+    <a
+      href="https://api.whatsapp.com/send?phone=5541995919194"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-whatsapp-wrap"
+      title="Chamar no WhatsApp: (41) 99591-9194"
+    >
+      <span class="btn-whatsapp-label">(41) 99591-9194</span>
+      <span class="btn-whatsapp">
+        <img src="image/logo-whats-app.png" alt="WhatsApp" />
+      </span>
+    </a>
 
     <script src="script/animations.js"></script>
     <script src="script/symbols.js"></script>
